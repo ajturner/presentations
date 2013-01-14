@@ -42,6 +42,12 @@ footer {
     bottom: 0px;
     position: absolute;
 }
+#status {
+    position: absolute;
+    right: 0px;
+    bottom: 0px;
+    letter-spacing: 0px;    
+}
 </style><script type='text/javascript'>
 window.onload = function() {
     var playing = false;
@@ -88,6 +94,9 @@ window.onload = function() {
         if(playing) {
             document.onclick();
             setTimeout(play, playrate);
+            document.getElementById("status").innerHTML = "playing"
+        } else {
+            document.getElementById("status").innerHTML = "paused"
         }
     };
     if (window.location.hash) cur = parse_hash() || cur;
@@ -131,12 +140,15 @@ window.onload = function() {
 </code></div>
 <!-- <div><iframe src="map.html" height="500" width="1000" scrolling="no" border=0></iframe></span></div> -->
 <div>creation markers polylines polygons controls images inspection pan/zoom events JSON Filters <em>swap</em></div>
+<div><img src="images/Mapstraction Sandbox.png" width="800" height="605" alt="Mapstraction Sandbox"><a href="http://mapstraction.appspot.com/#switching_providers" style="font-size: 85px">Demo</a></div>
+<div>why?</div>
+<div><img src="images/iceberg.jpg" alt="American Flag" /></div>
 <div><img src="images/american-flag.jpg" alt="American Flag" />freedom</div>
 <div>
     <h3>hacking</h3>
     <ul>
         <li style="opacity: 0"><a href="http://wordpress.org/extend/plugins/geopress/" title="WordPress &#8250; GeoPress &laquo; WordPress Plugins">GeoPress</a> location blogging</li>
-        <li style="opacity: 0">hypermedia maps - <a>Chassis</a> </li> <!-- Gravure? --> 
+        <li style="opacity: 0">hypermedia maps - <a href="https://github.com/ajturner/intaglio">Intaglio</a> </li> <!-- Gravure? --> 
         <li style="opacity: 0">Hijacking map sites</li>
     </ul>
 </div>
@@ -144,7 +156,7 @@ window.onload = function() {
     <h3>hacking</h3>
     <ul>
         <li><a href="http://wordpress.org/extend/plugins/geopress/" title="WordPress &#8250; GeoPress &laquo; WordPress Plugins">GeoPress</a> location blogging</li>
-        <li style="opacity: 0">hypermedia maps - <a>Chassis</a> </li> <!-- Gravure? --> 
+        <li style="opacity: 0">hypermedia maps - <a href="https://github.com/ajturner/intaglio">Intaglio</a> </li> <!-- Gravure? --> 
         <li style="opacity: 0">Hijacking map sites</li>
     </ul>
 </div>
@@ -152,7 +164,7 @@ window.onload = function() {
     <h3>hacking</h3>
     <ul>
         <li><a href="http://wordpress.org/extend/plugins/geopress/" title="WordPress &#8250; GeoPress &laquo; WordPress Plugins">GeoPress</a> location blogging</li>
-        <li style="opacity: 1">hypermedia maps - <a>Chassis</a> </li> <!-- Gravure? --> 
+        <li style="opacity: 1">hypermedia maps - <a href="https://github.com/ajturner/intaglio">Intaglio</a> </li> <!-- Gravure? --> 
         <li style="opacity: 0">Hijacking map sites</li>
     </ul>
 </div>
@@ -160,10 +172,11 @@ window.onload = function() {
     <h3>hacking</h3>
     <ul>
         <li><a href="http://wordpress.org/extend/plugins/geopress/" title="WordPress &#8250; GeoPress &laquo; WordPress Plugins">GeoPress</a> location blogging</li>
-        <li style="opacity: 1">hypermedia maps - <a>Chassis</a> </li> <!-- Gravure? --> 
+        <li style="opacity: 1">hypermedia maps - <a href="https://github.com/ajturner/intaglio">Intaglio</a> </li> <!-- Gravure? --> 
         <li style="opacity: 1">Hijacking map sites</li>
     </ul>
 </div>
 <div><a href="https://github.com/mapstraction/mxn">github.com/mapstraction/mxn</a></div>
 
 <footer>@ajturner - <a href="http://heorb.it/jsgeo2013">heorb.it/jsgeo2013</a></footer>
+<span id="status">paused</span>
