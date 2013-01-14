@@ -42,7 +42,7 @@ footer {
     bottom: 0px;
     position: absolute;
 }
-#status {
+#meta {
     position: absolute;
     right: 0px;
     bottom: 0px;
@@ -92,6 +92,7 @@ window.onload = function() {
     };
     function play() {
         if(playing) {
+            startTimer();
             document.onclick();
             setTimeout(play, playrate);
             document.getElementById("status").innerHTML = "playing"
@@ -104,6 +105,12 @@ window.onload = function() {
         var c = parse_hash();
         if (c !== cur) go(c);
     };
+    var timer = 5 * 60 * 1000;
+    function startTimer() {
+        timer -= 1000;
+        document.getElementById("time").innerHTML = timer / 1000;
+        setTimeout(startTimer,1000);
+    }
 
     go(cur);
 };
@@ -177,4 +184,4 @@ window.onload = function() {
 </div>
 <div><img src="images/sayge2.jpg" height="600" style="font-size: 80px"><a href="https://github.com/mapstraction/mxn">github.com/mapstraction/mxn</a></div>
 <footer>@ajturner - <a href="http://heorb.it/jsgeo2013">heorb.it/jsgeo2013</a></footer>
-<span id="status">paused</span>
+<span id="meta"><span id="status">paused</span> - <span id="time"></span></span>
