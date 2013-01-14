@@ -110,6 +110,10 @@ window.onload = function() {
         timer -= 1000;
         document.getElementById("time").innerHTML = timer / 1000;
         setTimeout(startTimer,1000);
+        if(timer <= 0) {
+            document.getElementById("status").innerHTML = "STOP!!!!!"
+            document.getElementById("meta").style.color="red";
+        }
     }
 
     go(cur);
