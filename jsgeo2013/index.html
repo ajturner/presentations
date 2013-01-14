@@ -79,9 +79,9 @@ window.onload = function() {
         if (window.location.hash !== n) window.location.hash = n;
         document.title = e.textContent || e.innerText;
     }
-    document.onclick = function() {
-        go(++cur % (s.length));
-    };
+    // document.onclick = function() {
+    //     go(++cur % (s.length));
+    // };
     document.onkeydown = function(e) {
         (e.which === 39) && go(Math.min(s.length - 1, ++cur));
         (e.which === 37) && go(Math.max(0, --cur));
@@ -120,9 +120,10 @@ window.onload = function() {
     go(cur);
 };
 </script></head><body>
+<div><img src="images/chelm.jpg" width="776" height="596" alt="Chelm"></div>
 <div>Mapstraction</div>
 <div><em>@ajturner</em></div>
-<div><img src="images/mapstraction_icon.png" width="170" height="78" alt="Mapstraction Icon" />Mapstraction</div>
+<div><img="images/mapstraction_icon.png" width="170" height="78" alt="Mapstraction Icon" />Mapstraction</div>
 <div><img src="images/mapstraction_icon.png" width="170" height="78" alt="Mapstraction Icon" /><em>Map</em>straction</div>
 <div><img src="images/mapstraction_icon.png" width="170" height="78" alt="Mapstraction Icon" />Map<em><sub>ab</sub>straction</em></div>
 <div>Ye ol' <em>interwebs</em></div>
@@ -158,8 +159,8 @@ window.onload = function() {
 <div>
     <h3>hacking</h3>
     <ul>
-        <li style="opacity: 0"><a href="http://wordpress.org/extend/plugins/geopress/" title="WordPress &#8250; GeoPress &laquo; WordPress Plugins">GeoPress</a> location blogging</li>
-        <li style="opacity: 1">hypermedia maps - <a href="https://ajturner.github.com/intaglio">Intaglio</a> </li> <!-- Gravure? --> 
+        <li style="opacity: 0"><a href="http://wordpress.org/extend/plugins/geopress/" title="WordPress &#8250; GeoPress &laquo; WordPress Plugins" target="_new">GeoPress</a> location blogging</li>
+        <li style="opacity: 0">hypermedia maps - <a href="http://ajturner.github.com/intaglio" target="_new">Intaglio</a> </li> <!-- Gravure? --> 
         <li style="opacity: 0">Hijacking map sites</li>
     </ul>
 </div>
@@ -167,23 +168,23 @@ window.onload = function() {
     <h3>hacking</h3>
     <ul>
         <li><a href="http://wordpress.org/extend/plugins/geopress/" title="WordPress &#8250; GeoPress &laquo; WordPress Plugins">GeoPress</a> location blogging</li>
-        <li style="opacity: 1">hypermedia maps - <a href="https://ajturner.github.com/intaglio">Intaglio</a> </li> <!-- Gravure? --> 
+        <li style="opacity: 0">hypermedia maps - <a href="http://ajturner.github.com/intaglio" target="_new">Intaglio</a> </li> <!-- Gravure? --> 
         <li style="opacity: 0">Hijacking map sites</li>
     </ul>
 </div>
 <div>
     <h3>hacking</h3>
     <ul>
-        <li><a href="http://wordpress.org/extend/plugins/geopress/" title="WordPress &#8250; GeoPress &laquo; WordPress Plugins">GeoPress</a> location blogging</li>
-        <li style="opacity: 1">hypermedia maps - <a href="https://ajturner.github.com/intaglio">Intaglio</a> </li> <!-- Gravure? --> 
+        <li><a href="http://wordpress.org/extend/plugins/geopress/" title="WordPress &#8250; GeoPress &laquo; WordPress Plugins" target="_new">GeoPress</a> location blogging</li>
+        <li style="opacity: 1">hypermedia maps - <a href="http://ajturner.github.com/intaglio" target="_new">Intaglio</a> </li> <!-- Gravure? --> 
         <li style="opacity: 0">Hijacking map sites</li>
     </ul>
 </div>
 <div>
     <h3>hacking</h3>
     <ul>
-        <li><a href="http://wordpress.org/extend/plugins/geopress/" title="WordPress &#8250; GeoPress &laquo; WordPress Plugins">GeoPress</a> location blogging</li>
-        <li style="opacity: 1">hypermedia maps - <a href="https://ajturner.github.com/intaglio">Intaglio</a> </li> <!-- Gravure? --> 
+        <li><a href="http://wordpress.org/extend/plugins/geopress/" title="WordPress &#8250; GeoPress &laquo; WordPress Plugins" target="_new">GeoPress</a> location blogging</li>
+        <li style="opacity: 1">hypermedia maps - <a href="http://ajturner.github.com/intaglio" target="_new">Intaglio</a> </li> <!-- Gravure? --> 
         <li style="opacity: 1">Hijacking map sites</li>
     </ul>
 </div>
