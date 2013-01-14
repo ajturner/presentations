@@ -52,6 +52,8 @@ footer {
 window.onload = function() {
     var playing = false;
     var playrate = 15 * 1000;
+    var timer = 5 * 60 * 1000;
+
     var s = document.getElementsByTagName('div'), cur = 0;
     if (!s) return;
     function go(n) {
@@ -105,7 +107,6 @@ window.onload = function() {
         var c = parse_hash();
         if (c !== cur) go(c);
     };
-    var timer = 5 * 60 * 1000;
     function startTimer() {
         timer -= 1000;
         document.getElementById("time").innerHTML = timer / 1000;
