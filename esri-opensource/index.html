@@ -1,13 +1,15 @@
 <!doctype html>
 <html lang="en">
-
+<!-- 
+  Thanks for checking out the source code. It's like that you're both curious and technical. And, well, that's exactly the kind of people we want to work with. If you want to build next generation geospatial technology, big data analysis, and solve problems that matter to the world, then ping me at aturner - at - esri.com.
+-->
 <head>
   <meta charset="utf-8">
 
   <title>Going Open-Source with Esri - Andrew Turner</title>
 
   <meta name="description" content="A framework for easily creating beautiful presentations using HTML">
-  <meta name="author" content="Hakim El Hattab">
+  <meta name="author" content="Andrew Turner">
 
   <meta name="apple-mobile-web-app-capable" content="yes" />
   <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
@@ -42,17 +44,13 @@
             <em>DC Meetup - January 2013</em>
             <p><br/><br/>
               <strong>Andrew Turner - @ajturner</strong>
-              <p class="fragment">slides: <a href="http://heorb.it/eos">heorb.it/eos</a></p>
+              <p>slides: <a href="http://heorb.it/eos">heorb.it/eos</a></p>
             </p>
           </span>
-          <!-- <cite><img src="images/esriGlobeLogo.png" /></cite> -->
         </section>
         <section>
           <section>
             <h3>Esri provides tools to <strong>make decisions</strong></h3>
-            <!-- <aside class="notes">
-              Oh hey, these are some notes. They'll be hidden in your presentation, but you can see them if you open the speaker notes window (hit 's' on your keyboard).
-            </aside> -->
           </section>
           <section>
             <h3>ArcGIS is a robust <br />and full featured platform.</h3>
@@ -63,57 +61,85 @@
               <li class="fragment">Services</li>
               <li class="fragment">Libraries</li>
             </ul>
+          <aside class="notes">
+            This platform is built to be stable, secure, performant, scale, and provide the general capabilities that our users need to address complex and important issues. It consists of many components, and we'll come back to them soon.
+          </aside>  
           </section>
+          <section>
+            <p class="fragment">Develop the best technology possible.</p>
+            <p class="fragment">Enable our community to solve problems.</p>
+            <aside class="notes">
+              Our goals are clear and effective. We are driven to provide the best technology to enable you to solve your problems.
+            </aside> 
+          </section>               
           <section class="background">
             <img src="images/community-flickr-qwertyuiop.png" class="image" />
-            <h3 class="text text-middle">Communities</h3> 
-            <h5 class="fragment">have many different problems and needs that we can't always directly solve.</h5>
+            <h3 class="text text-top">Communities</h3> 
+            <h5 class="fragment">are many and varied.</h5>
+            <aside class="notes">
+              While we work closely with users to understand their needs, we can't address every specific feature. Each community of user: government, military, NGO, urban planning, journalists, and so on each have their own methods, requirements, and integration. And in particular users need tools that speak their language and allow them to work in their domain without having to learn complex and esoteric technical terminology.
+            </aside>  
           </section>
           <section class="background">
              <img src="images/magritte-castle.jpg" alt="Magritte Castle" />
-            <span class="text text-middle">Code enables developers to build <strong>sky castles</strong></span>
+            <span class="text text-bottom">Code enables developers to build <strong>sky castles</strong></span>
+            <aside class="notes">
+              Anyone who is a software developer, or even has written a small script, has felt the exhileration of expressing a tedious and complex task where the computer seemed to magically do all the work. In cyberspace anything is possible and we have now have amazing tools to quickly implement and push our applications to millions of users.
+            </aside>  
           </section>
           <section>Want to enable people to have their own <em>vision</em> and <strong>control their own future</strong></section>
           <section class="background">
             <img src="images/Girl in Legos - tantek.jpg" alt="Girl In Legos   Tantek">
-            <p class="text text-middle"><h3 class="text text-middle">Freedom</h3> 
-                                  <li class="fragment">to choose,</li> 
-                                  <li class="fragment">to innovate,</li> 
-                                  <li class="fragment">to evolve.</li></section></p>
-        </section>
-        <section>
-          <section>Open-Source is the solution</section>
-          <section class="background">
-            <img src="images/cathedral_bazaar.png" />
-            <h1 class="text text-middle">Cathedral <br /> &amp; Bazaar</h1>
-            <h5 class="fragment">a holistic community</h5></section>
-          <section>Open Source became as simple as "<a target="new" href="view-source:http://river.local/Presentation/_git/esri-opensource/#/2/2">view source</a>"</section>
-          <section>Encourages people to learn through example, 
-                     <ul>
-                       <li class="fragment">customize</li>
-                       <li class="fragment">extend</li>
-                       <li class="fragment">innovate</li>
-                       <li class="fragment">own your solution.</li>
-                      </ul>
+            <h3 class="text text-middle">Freedom</h3> 
+              <aside class="notes">
+                to choose, to innovate, to evolve
+              </aside>
           </section>
-          <section>Only works when there are <strong>positive feedback flows</strong></section>
         </section>
         <section>
           <section>
             <h3>Esri's <em>new</em> open-source effort</h3>
              <h5 class="fragment">has been happening for a long time</h5>
+             <aside class="notes">
+               This isn't new. Esri has a long history of working with and supporting the open-source community and even using open technology and data within our platform.
+             </aside>
            </section>
            <section>
-             <h3>Esri has been an open-source company</h3>
+             <h3>Esri has been an open technology company</h3>
              <p class="fragment"><strong>Content:</strong> OpenStreetMap, Geodata.gov</p>
              <p class="fragment"><strong>Code:</strong> PostgreSQL, MySQL, MongoDB, OGR/GDAL</p>
-             <p class="fragment"><strong>Services:</strong> OGC, GeoServices, LDAP, OAuth</p>
+             <p class="fragment"><strong>Services:</strong> OGC, GeoServices, LDAP, OAuth, <em>Shapefiles</em></p>
              <p class="fragment"><strong>Libraries:</strong> ArcScripts, Python</p>
-           </section>                     
-           <section>
-             <p class="fragment">Develop the best technology possible.</p>
-             <p class="fragment">Provide platform for community to apply and evolve.</p>
-           </section>
+             <aside class="notes">ESRI has always supported the developer community with source samples and detailed SDK documentation for configuring and extending the ArcGIS system. We’ve also been a big supporter of the Open-Source Community, providing code and sponsorships for efforts relevant to the users of our system.               
+             </aside>
+           </section>                          
+          <section>
+            <img src="images/viewsource.png" alt="Viewsource" style="position: absolute; bottom: -250px; right: 200px; width: 200px; height: 200px;">
+            Open-Source is as simple as...
+            "<a target="new" href="view-source:http://ajturner.github.com/presentations/esri-opensource/">view source</a>"
+            <aside class="notes">
+              particularly with Web applications and "HTML5", anyone can look at your code.
+            </aside>
+          </section>
+          <section>Encourages people to learn through example, 
+             <ul>
+               <li class="fragment">customize</li>
+               <li class="fragment">extend</li>
+               <li class="fragment">innovate</li>
+               <li class="fragment">own your solution.</li>
+              </ul>
+          </section>
+          <section>Only works when there are <strong>positive feedback flows</strong></section>
+        </section>
+        <section>
+          <section>
+            <h3>Open-Source is an opportunity</h3>
+          </section>
+          <section class="background">
+            <img src="images/cathedral_bazaar.png" />
+            <h1 class="text text-middle">Cathedral <br /> &amp; Bazaar</h1>
+            <!-- <h5 class="fragment">a holistic community</h5> -->
+          </section>
            <section class="background">
              <img src="images/feedback-flows.png" class="image">
              <h3 class="text text-middle">'Social Coding'</h3>
@@ -129,23 +155,36 @@
                 76 (100 in esri) currently on github
               </aside>
            </section>
+           <section class="background">
+             <img src="images/Broken Link - darwinbell.jpg" alt="Broken Link   Darwinbell">
+             <h3 class="text text-middle">Licensing</h3>
+             <h3 class="fragment roll-in">default: Apache 2</h3>
+           </section>
           <section>
             <h3>Will only work if <strong>you</strong> collaborate</h3>
           </section>
           <section>
-            Many Languages: <span class="fragment">Javascript</span><span class="fragment">, Python</span><span class="fragment">, .NET</span><span class="fragment">, Ruby</span><span class="fragment">, PHP</span><span class="fragment">, Java</span><span class="fragment">, ActionScript/Flex</span><span class="fragment">, Silverlight</span><span class="fragment">, C</span>
-            <p class="fragment">Web Applications, Mobile, Big Data analysis, Templates, Utilities</p>
+            Many Languages: <span class="fragment  roll-in">Javascript</span><span class="fragment  roll-in">, Python</span><span class="fragment  roll-in">, .NET</span><span class="fragment roll-in">, Ruby</span><span class="fragment  roll-in">, PHP</span><span class="fragment  roll-in">, Java</span><span class="fragment  roll-in">, ActionScript/Flex</span><span class="fragment  roll-in">, Silverlight</span><span class="fragment  roll-in">, C</span>
+            <p class="fragment roll-in">Web Applications, Mobile, Big Data analysis, Templates, Utilities</p>
+            <aside class="notes">
+              Nearly 50 repositories, and a lot more coming up. In particular new areas where users can really innovate and create new ideas and solutions that we didn't think of.
+            </aside>
           </section>
         </section>
-        <section>
-          <h3>Git started.</h3>
+        <section class="background">
+          <img src="images/atat-flickr-ajturner.jpg" alt="@@ Flickr Ajturner" />
+          <h3 class="text text-middle">Git started.</h3>
           <a href="http://esri.github.com">esri.github.com</a>
-          <h3 class="fragment">to be continued at DevSummit...</h3>
+          <h4 class="fragment">to be continued at DevSummit...</h4>
         </section>
       </div>
 
 
 		</div>
+    <footer>
+       <img src="images/esriGlobeLogo.png" />
+        <span id="cite">@ajturner - <a href="http://heorb.it/esri-opensource">heorb.it/esri-opensource</a></span>
+    </footer>
 
 		<script src="lib/js/head.min.js"></script>
 		<script src="js/reveal.min.js"></script>
