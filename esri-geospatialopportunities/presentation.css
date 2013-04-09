@@ -1,0 +1,135 @@
+/*h1,h2,h3,p {text-align: left; }*/
+
+.reveal img.bullet_image { height: 50px; margin-right: 20px;}
+.background {
+    position:relative;
+    float:left; /* optional */
+}
+.background .text  {
+    position:absolute;
+    left:30px;
+    padding: 10px 20px 20px 20px;
+    background: rgba(0, 0, 0, 0.6);
+    color: white;
+}
+.background .text-middle { top:40%; }
+.background .text-top { top:10%; }
+.background .text-bottom { top:80%; }
+.background .text h3, .background .text a {color: white;}
+.background .image { style="width: 100%; height: 100% }
+.reveal .slides {
+	height: 80%;
+	width: 100%;
+	top: 40%;
+}
+cite { color: #aaa; font-size: 0.6em; position: absolute; bottom: 0px; right: 0px;}
+.reveal section img {border: 0px; box-shadow: 0 0 0px;}
+.reveal img {max-width: none; max-height: none;}
+
+/*********************************************
+ * CONTROLS
+ *********************************************/
+
+.reveal .controls {
+	display: none;
+	position: fixed;
+	width: 55px;
+	height: 55px;
+	z-index: 30;
+	right: 10px;
+	bottom: 10px;
+}
+
+.reveal .controls div {
+	position: absolute;
+	opacity: 0.1;
+	width: 0; 
+	height: 0; 
+	border: 6px solid transparent;
+
+	-webkit-transition: opacity 0.2s ease;
+	   -moz-transition: opacity 0.2s ease;
+	    -ms-transition: opacity 0.2s ease;
+	     -o-transition: opacity 0.2s ease;
+	        transition: opacity 0.2s ease;
+}
+
+.reveal .controls div.enabled {
+	opacity: 0.6;
+	cursor: pointer;
+}
+
+.reveal .controls div.enabled:active {
+	margin-top: 1px;
+}
+
+.reveal .controls div.navigate-left {
+	top: 21px;
+
+	border-right-width: 11px;
+	border-right-color: #eee;
+}
+
+.reveal .controls div.navigate-right {
+	left: 37px;
+	top: 21px;
+
+	border-left-width: 11px;
+	border-left-color: #eee;
+}
+
+.reveal .controls div.navigate-up {
+	left: 21px;
+
+	border-bottom-width: 11px;
+	border-bottom-color: #eee;
+}
+
+.reveal .controls div.navigate-down {
+	left: 21px;
+	top: 37px;
+
+	border-top-width: 11px;
+	border-top-color: #eee;
+}
+
+
+footer {
+  position: fixed;
+  z-index: 300;
+  left: 0px;
+  bottom: 0px;
+  font-size: 1.4em;
+  position: absolute;
+  width: 100%; 
+  height: 20px; 
+  padding: 12px;
+  color: white;
+
+  background-image: linear-gradient(right bottom, rgb(70,120,171) 26%, rgb(26,80,143) 63%);
+  background-image: -o-linear-gradient(right bottom, rgb(70,120,171) 26%, rgb(26,80,143) 63%);
+  background-image: -moz-linear-gradient(right bottom, rgb(70,120,171) 26%, rgb(26,80,143) 63%);
+  background-image: -webkit-linear-gradient(right bottom, rgb(70,120,171) 26%, rgb(26,80,143) 63%);
+  background-image: -ms-linear-gradient(right bottom, rgb(70,120,171) 26%, rgb(26,80,143) 63%);
+
+  background-image: -webkit-gradient(
+  	linear,
+  	right bottom,
+  	left top,
+  	color-stop(0.26, rgb(70,120,171)),
+  	color-stop(0.63, rgb(26,80,143))
+  );
+}
+footer #cite {
+  position: absolute;
+  left: 450px;
+}
+footer img {
+  position: absolute;
+  height: 40px;
+  left: 40px;
+  bottom: 0px;
+}
+footer a, footer a:visited {
+  color: white;
+}
