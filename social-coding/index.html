@@ -1,0 +1,283 @@
+<!doctype html>
+<html lang="en">
+<!-- 
+  Thanks for checking out the source code. It's like that you're both curious and technical. And, well, that's exactly the kind of people we want to work with. If you want to build next generation geospatial technology, big data analysis, and solve problems that matter to the world, then ping me at aturner - at - esri.com.
+-->
+<head>
+  <meta charset="utf-8">
+
+  <title>Social Coding with Github</title>
+
+  <meta name="description" content="Introduction to using Git and Github with Esri">
+  <meta name="author" content="Andrew Turner">
+
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+
+  <link rel="stylesheet" href="css/reveal.min.css">
+  <link rel="stylesheet" href="css/theme/default.css" id="theme">
+  <link rel="stylesheet" href="presentation.css">
+
+  <!-- For syntax highlighting -->
+  <link rel="stylesheet" href="lib/css/zenburn.css">
+
+  <!-- If the query includes 'print-pdf', use the PDF print sheet -->
+  <script>
+    document.write( '<link rel="stylesheet" href="css/print/' + ( window.location.search.match( /print-pdf/gi ) ? 'pdf' : 'paper' ) + '.css" type="text/css" media="print">' );
+  </script>
+
+  <!--[if lt IE 9]>
+    <script src="lib/js/html5shiv.js"></script>
+    <![endif]-->
+  </head>
+
+  <body>
+
+    <div class="reveal">
+
+      <div class="state-background"></div>
+
+      <div class="slides">
+        <section>
+          <span class="text text-middle">
+            <h2>Social Coding</h2>
+            <h3>with Git &amp; Github</h3>
+            <p><br/><br/>
+              <strong>Andrew Turner - @ajturner</strong>
+              <p>slides: <a href="http://esri.github.io/presentations/social-coding">esri.github.com/presentations/social-coding</a></p>
+            </p>
+            <br/><br/><br/><em>'spacebar' to advance<br/>'s' to show notes<br/>'f' for fullscreen</em>
+          </span>
+        </section>
+        <section>
+          <section>
+            <h3>Level 1: Getting Started</h3>
+          </section>
+          <section>
+            <h3>Git</h3>
+            <code>25edcfe3312d7f7a307427265845e53a6b3fda10</code>
+            <aside class="notes">
+              From Linus Torvalds - created to manage Linux kernel contributions
+            </aside>
+          </section>
+          <section>
+            <h3><strong>Distributed</strong> version control</h3>            
+            <code>git clone git@github.com:Esri/presentations.git</code>
+          </section>
+          <section>
+            <h3>Simple branching</h3>
+            <img src="images/git3.png"/><br/>
+            <code class="fragment">git branch ajturner-feature</code><br/>
+            <code class="fragment">git checkout -b ajturner-feature</code><br/>
+            <code class="fragment">git commit -am 'Added some new slides'</code><br/>
+            <code class="fragment">git checkout master</code>
+          </section>
+          <section>
+            <h3>What is Github?</h3>
+            <ul>
+              <li class="fragment">Hosted Git</li>
+              <li class="fragment">Social Network for Code</li>
+            </ul>
+          </section>
+        </section>
+        <section>
+          <section>
+            <h3>Level 2: Working in Git</h3>
+            <p class="fragment"><em>init add commit pull push</em></p>
+          </section>
+          <section>
+            <h3>Your first Repo</h3>
+            <code class="fragment">git init</code><br/>
+            <code class="fragment">git add Readme.md</code><br/>
+            <code class="fragment">git commit -am 'Initial Commit'</code><br/>
+            <aside class="notes">
+            </aside>
+          </section>
+          <section>
+            <h3>Working through Github</h3>
+            <img src="images/git4.png"/><br/>
+            <p class="fragment">Create or <em>Fork</em> a Project</p><br/>
+            <code class="fragment">git clone git@github.com:ajturner/project.git</code><br/>
+            <code class="fragment">git commit -am 'Fixed issue with bad Titles #345'</code><br/>
+            <code class="fragment">git push ajturner master</code><br/>
+            <aside class="notes">
+            </aside>
+          </section>
+        </section>
+        <section>
+          <section>
+            <h3>Level 3: Better Collaboration</h3>
+            <p class="fragment"><em>checkout merge</em></p>
+          </section>
+          <section>
+            <h3>Branching</h3>
+            <img src="images/git5.png"/><br/>
+            <code class="fragment">git checkout -b ajturner-newfeature</code><br/>
+            <code class="fragment">git commit -am 'Added feature #582'</code><br/>
+            <code class="fragment">git push ajturner ajturner-newfeature</code><br/>
+            <code class="fragment">git checkout master</code><br/>
+            <code class="fragment">git merge ajturner-newfeature</code><br/>
+            <aside class="notes">
+            </aside>
+          </section>
+          <section>
+            <h3>Pushing Back</h3>
+            <img src="images/git5.png"/><br/>
+            <code class="fragment">git remote add upstream git@github.com:Esri/project.git</code><br/>
+            <code class="fragment">git push upstream master</code><br/>
+            <aside class="notes">
+            </aside>
+          </section>
+        </section>  
+        <section>
+          <section>
+            <h3>Level 4: Master</h3>
+            <p class="fragment"><em>pull-request rebase</em></p>
+          </section>
+          <section>
+            <h3>Contributing with Pull-Request</h3>
+            <code class="fragment">git pull-request -b esri:master -h ajturner:master</code><br/>
+            <aside class="notes">
+            </aside>
+          </section>
+          <section>
+            <h3>Keeping a Clean History</h3>
+            <code class="fragment">git checkout ajturner-newfeature</code><br/>
+            <code class="fragment">git rebase upstream master</code><br/>
+            <aside class="notes">
+            </aside>
+          </section>
+        </section>
+        <section>
+          <section>
+            <h3>Ephiphany: Going Social</h3>
+          </section>
+          <section>
+            <h3>Pull-Requests &amp; Code Reviews</h3>
+            <aside class="notes">
+            </aside>
+          </section>
+          <section>
+            <h3>Gists</h3>
+            <aside class="notes">
+            </aside>
+          </section>
+        </section>        
+        <section>
+          <section>
+            <h3>Level 0: Tools of the Trade</h3>
+          </section>
+          <section>
+            <h3>Gooey Clients</h3>
+            <img src="images/GitHub_for_Windows.png" />
+            <p>windows.github.com</p>
+            <aside class="notes">
+            </aside>
+          </section>
+          <section>
+            <h3>Gooey Clients</h3>
+            <img src="images/GitHub_for_Mac.png" />
+            <p >mac.github.com</p>
+            <aside class="notes">
+            </aside>
+          </section>  
+          <section>
+            <h3>Gooey Clients</h3>
+            <img src="images/Sourcetree.png" />
+            <p >sourcetreeapp.com</p>
+            <aside class="notes">
+            </aside>
+          </section>
+          <section>
+            <h3>Gists</h3>
+            <img src="images/github_gist.png" />
+            <p class="fragment">...still git</p>
+            <aside class="notes">
+            </aside>
+          </section>
+          <section>
+            <h3><a href="http://bl.ocks.org/">bl.ocks.org</h3>
+            <img class="fragment" src="images/blocks_map.png"></img>
+          </section>
+          <section>
+            <h3>Github Wiki</h3>
+            <p class="fragment"><a href="http://whatismarkdown.com/">(Markdown)[http://whatismarkdown.com/]</a></p>
+            <img class="fragment" src="images/github_wiki.png"/>
+            <p class="fragment">...still git</p>
+            <aside class="notes">
+            </aside>
+          </section>          
+          <section>
+            <h3>gh-pages</h3>
+            <code class="fragment">git checkout -b gh-pages</code><br/>
+            <code class="fragment">git push ajturner gh-pages</code><br/>
+            <aside class="notes">
+            </aside>
+          </section>
+          <section>
+            <h3><a href="http://huboard.com">Huboard</a></h3>
+            <aside class="notes">
+            </aside>
+          </section>
+        </section>          
+        <section>
+          <h3>Jump in!</h3>
+          <ul>
+            <li>Esri on Github - <a href="http://esri.github.io">esri.github.io</a></li>
+            <li>This Presentation - <a href="http://heorb.it/social-coding">heorb.it/social-coding</a></li>
+            <li>Git Tutorial - <a href="http://git-scm.com/docs/gittutorial">git-scm.com</a></li>
+<li>Cheatsheet <a href="http://zrusin.blogspot.com/2007/09/git-cheat-sheet.html">zrusin.blogspot.com/2007/09/git-cheat-sheet.html</a></li>
+            <li>Try it out - <a href="http://try.github.com">try.github.com</a></li>
+            <li>or <a href="http://pcottle.github.io/learnGitBranching/">pcottle.github.io/learnGitBranching/</a></li>
+          </ul>
+        </section>
+      </div>
+		</div>
+    <footer>
+       <img src="images/esriGlobeLogo.png" />
+        <span id="cite">@ajturner - <a href="http://ajturner.github.io/presentations/social-coding">ajturner.github.com/presentations/social-coding </a></span>
+    </footer>
+		<script src="lib/js/head.min.js"></script>
+		<script src="js/reveal.min.js"></script>
+
+		<script>
+
+			// Full list of configuration options available here:
+			// https://github.com/hakimel/reveal.js#configuration
+			Reveal.initialize({
+				controls: true,
+				progress: true,
+				history: true,
+				center: true,
+
+				theme: Reveal.getQueryHash().theme || 'simple', // available themes are in /css/theme
+				transition: Reveal.getQueryHash().transition || 'default', // default/cube/page/concave/zoom/linear/fade/none
+
+				// Optional libraries used to extend on reveal.js
+				dependencies: [
+					{ src: 'lib/js/classList.js', condition: function() { return !document.body.classList; } },
+					{ src: 'plugin/markdown/showdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+					{ src: 'plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+					{ src: 'plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } },
+					{ src: 'plugin/zoom-js/zoom.js', async: true, condition: function() { return !!document.body.classList; } },
+					{ src: 'plugin/notes/notes.js', async: true, condition: function() { return !!document.body.classList; } }
+					// { src: 'plugin/remotes/remotes.js', async: true, condition: function() { return !!document.body.classList; } }
+				]
+			});
+
+		</script>
+<script type="text/javascript">
+
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-38229022-1']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+
+</script>
+	</body>
+</html>
