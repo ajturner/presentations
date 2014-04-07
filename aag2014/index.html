@@ -1,0 +1,207 @@
+<!doctype html>
+<html lang="en">
+
+	<head>
+		<meta charset="utf-8">
+
+		<title>OpenGIS: Technical and Implementation Issues</title>
+
+		<meta name="description" content="A framework for easily creating beautiful presentations using HTML">
+		<meta name="author" content="Hakim El Hattab">
+
+		<meta name="apple-mobile-web-app-capable" content="yes" />
+		<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+		<link rel="stylesheet" href="css/reveal.min.css">
+		<link rel="stylesheet" href="css/theme/simple.css" id="theme">
+
+		<!-- For syntax highlighting -->
+		<link rel="stylesheet" href="lib/css/zenburn.css">
+
+		<!-- If the query includes 'print-pdf', use the PDF print sheet -->
+		<script>
+			document.write( '<link rel="stylesheet" href="css/print/' + ( window.location.search.match( /print-pdf/gi ) ? 'pdf' : 'paper' ) + '.css" type="text/css" media="print">' );
+		</script>
+
+		<style type="text/css">
+			.overlay { opacity: 0.8; min-height: 90px;}
+			.overlay, .overlay h2, .overlay h1, .overlay h3, .overlay p, .overlay a:link, .overlay a:visited {
+				background-color: #000;
+				color: #FFF;
+				padding-bottom: 20px; 
+			}
+			#footer {
+				display: block;
+				position:	absolute;
+				bottom: 10px;
+			}
+			#footer { background-color: #FFF; opacity: 0.8;}
+		</style>
+		<!--[if lt IE 9]>
+		<script src="lib/js/html5shiv.js"></script>
+		<![endif]-->
+	</head>
+
+	<body>
+
+		<div class="reveal">
+
+			<!-- Any section element inside of this container is displayed as a slide -->
+			<div class="slides">
+				<section data-background="images/geojson.png">
+					<div class="overlay">
+										<h1>OpenGIS: Technical Issues</h1>
+										<h3>the nuts &amp; bolts of open</h3>
+										<p>
+											<a href="http://highearthorbit.com">Andrew Turner</a> / <a href="http://twitter.com/ajturner">@ajturner</a>
+										</p></div>
+				</section>
+				<section>
+				<h2>About @ajturner</h2>
+				<ul>
+					<li class="fragment">Engineer</li>
+					<li class="fragment">'neogeographer'</li>
+					<li class="fragment">Open-Source developer</li>
+					<li class="fragment">OSGeo Founcation - Charter Member</li>
+					<li class="fragment">OSM Founcation Member</li>
+					<li class="fragment">CrisisCommons co-founder</li>
+					<li class="fragment">OpenSearch-Geo, GeoRSS, KML</li>
+				</ul>
+				</section>
+			    <section data-id="2928a9efddf8d67fa551ad896e62a694">
+        <section data-id="87955889da5a4c90c2f34dc5e280cd9e">
+            <h1>More to 'open'</h1>
+            <ul>
+					<li class="fragment">Source Code</li>
+					<li class="fragment">Specifications</li>
+					<li class="fragment">Data Formats</li>
+					<li class="fragment">Licensing</li>
+				</ul>
+    </section>
+    <section data-background="images/applelogo.jpg">
+        <h2 style="color:#FFF">pragmatism</h2>
+        </section>    
+    <section>
+    	<img src="images/xkcd_standards.png" height="600"/>
+    </section>    
+    <section data-id="" data-background="images/pyramids.png">
+    	<div class="overlay"><h2>technology changes faster than any organization</h2></div>
+  	</section>
+    <section data-background="images/geoowl.png">
+        <div class="overlay"><h2>niche interests</h2></div>
+    </section>  	
+    <section data-id="555c51e6e590238a4a358654cc47b8e4" data-background="images/xmlstrings.png">
+    	<div class="overlay">
+    	          <h2>Complexity Grows</h2>
+    	          <div>Entropy is inevitable</div>
+    	 </div>  
+    </section>
+    <section data-background="images/microformatskid.png">
+        <div class="overlay"><h2>new developers every day</h2></div>
+    </section>
+    <section data-background="images/engine.png">
+        <div class="overlay"><h2>let me under the hood</h2></div>
+    </section>
+</section>
+<section data-id="e4b9ab1e60a3d605525b4eb63b0ea450">
+    <section data-id="a9d75235c5f687448abf784c2b6b31e5">
+        <h2>flexibility</h2>
+    </section>
+    <section data-background="images/machinetags.png">
+       <div class="overlay"> <h2>ontology vs. taxonomy</h2></div>
+    </section>
+    <section data-id="4ba70bcd66cc4928cf8c84c47b0c1a58">
+        <h2>lifecycle of technology</h2>
+    </section>
+</section>
+<section data-id="70514900cb4a2cb3d7cb161404c03700">
+    <section data-background="images/girlcomputer.png">
+        <div class="overlay"><h2>think of the user</h2></div>
+    </section>
+    <section data-background="images/legousb.png">
+        <div class="overlay"><h2>open exchange</h2></div>
+    </section>    
+    <section data-background="images/duplo.png">
+        <div class="overlay"><h2>small pieces, loosely joined</h2></div>
+    </section>
+    <section data-background="">
+    	<img src="images/httpstack.png"></img>
+    </section>
+</section>
+<section>
+<section data-background="">
+    <h2>Hybrid Architectures</h2>
+    <div>flexibility and interchangability</div>
+</section>
+<section>
+  <img src="images/openstack.png" />
+</section>
+<section data-background="images/pubsubhubbub.png">
+    <div class="overlay"><h2>the web</h2></div>
+</section>
+<section data-background="images/arctocat.png"> </section>
+<section data-background="images/esrigithub.png">
+	<div class="overlay">
+		<ul>
+			<li class="fragment highlight-red roll-in">718 members</li>
+			<li class="fragment highlight-red roll-in">376 repositories</li>
+			<li class="fragment highlight-red roll-in">3324 forks</li>
+		</ul>
+	</div>
+</section>
+<section>
+	<img src="images/esri_contributions.png" height="800"/>
+</section>
+</section>
+				<section data-background="">
+										<h1>OpenGIS: Technical</h1>
+										<h3>http://ajturner.github.io/presentations/aag2014/</h3>
+										<p>
+											<a href="http://highearthorbit.com">Andrew Turner</a> / <a href="http://twitter.com/ajturner">@ajturner</a>
+										</p>
+				</section>
+
+			</div>
+
+		</div>
+
+		<div id="footer">
+			<img src="images/esri_dc.png"></img>
+		</div>
+		<script src="lib/js/head.min.js"></script>
+		<script src="js/reveal.min.js"></script>
+
+		<script>
+
+			// Full list of configuration options available here:
+			// https://github.com/hakimel/reveal.js#configuration
+			Reveal.initialize({
+				controls: true,
+				progress: true,
+				history: true,
+				center: true,
+
+				theme: Reveal.getQueryHash().theme, // available themes are in /css/theme
+				transition: Reveal.getQueryHash().transition || 'default', // default/cube/page/concave/zoom/linear/fade/none
+
+				// Parallax scrolling
+				// parallaxBackgroundImage: 'https://s3.amazonaws.com/hakim-static/reveal-js/reveal-parallax-1.jpg',
+				// parallaxBackgroundSize: '2100px 900px',
+
+				// Optional libraries used to extend on reveal.js
+				dependencies: [
+					{ src: 'lib/js/classList.js', condition: function() { return !document.body.classList; } },
+					{ src: 'plugin/markdown/marked.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+					{ src: 'plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+					{ src: 'plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } },
+					{ src: 'plugin/zoom-js/zoom.js', async: true, condition: function() { return !!document.body.classList; } },
+					{ src: 'plugin/notes/notes.js', async: true, condition: function() { return !!document.body.classList; } }
+				]
+			});
+
+		</script>
+
+	</body>
+</html>
