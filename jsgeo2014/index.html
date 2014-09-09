@@ -1,0 +1,153 @@
+<!DOCTYPE html><html><head><title></title><meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" /><style type='text/css'>
+body {
+  font-family: 'Helvetica';
+  letter-spacing:-5px;
+  background:#000;
+  background-size:100%;
+  color:#fff;
+  margin:0;
+  padding:0;
+  font-weight:bold;
+}
+
+h1, h2, h3, p {
+  margin:0;
+}
+
+em, a {
+  font-style:normal;
+  color:#ef63ff;
+}
+
+a {
+  background: #34d0e7;
+  color:#000;
+  text-decoration:none;
+}
+
+img {
+  width:100%;
+}
+
+div {
+  cursor:pointer;
+  cursor:hand;
+  position:absolute;
+  top:0;
+  left:0;
+}
+</style><script type='text/javascript'>
+window.onload = function() {
+    var s = document.getElementsByTagName('div'), cur = 0;
+    if (!s) return;
+    function go(n) {
+        cur = n;
+        var i = 1e3, e = s[n];
+        for (var k = 0; k < s.length; k++) s[k].style.display = 'none';
+        e.style.display = 'inline';
+        e.style.fontSize = i + 'px';
+        if (e.firstChild.nodeName === 'IMG') {
+            document.body.style.backgroundImage = 'url(' + e.firstChild.src + ')';
+            e.firstChild.style.display = 'none';
+        } else {
+            document.body.style.backgroundImage = '';
+            document.body.style.backgroundColor = e.style.backgroundColor;
+        }
+        while (
+            e.offsetWidth > window.innerWidth ||
+            e.offsetHeight > window.innerHeight) {
+            e.style.fontSize = (i -= 10) + 'px';
+            if (i < 0) break;
+        }
+        e.style.marginTop = ((window.innerHeight - e.offsetHeight) / 2) + 'px';
+        if (window.location.hash !== n) window.location.hash = n;
+        document.title = e.textContent || e.innerText;
+    }
+    document.onclick = function() {
+        go(++cur % (s.length));
+    };
+    document.onkeydown = function(e) {
+        (e.which === 39) && go(Math.min(s.length - 1, ++cur));
+        (e.which === 37) && go(Math.max(0, --cur));
+    };
+    function parse_hash() {
+        return Math.max(Math.min(
+            s.length - 1,
+            parseInt(window.location.hash.substring(1), 10)), 0);
+    }
+    if (window.location.hash) cur = parse_hash() || cur;
+    window.onhashchange = function() {
+        var c = parse_hash();
+        if (c !== cur) go(c);
+    };
+
+    go(cur);
+};
+</script></head><body>
+<div>js.geo 2014<br /><em>Koop</em> <br />@ajturner</div>
+<div>Web API &raquo; <em>GeoJSON</em> &amp; <em>FeatureServices</em></div>
+<div>ETL <em>for APIs</em></div>
+
+<div><img src="./koop_architecture.png"/> </div>
+<div><a href="https://github.com/esri/koop">github.com/esri/koop</a></div>
+<div>
+  <li><em>Github</em> <a target="_blank" href="http://koop.dc.esri.com/github">koop.dc.esri.com/github</a></li>
+  <li><em>Gists</em> <a target="_blank" href="http://koop.dc.esri.com/gist">koop.dc.esri.com/gist</a></li>
+  <li><em>Socrata</em> <a target="_blank" href="http://koop.dc.esri.com/socrata">koop.dc.esri.com/socrata</a></li>
+</ul>
+</div>
+<div>Exports <em> geojson, kml, csv, shp</em> </div>
+<div>Also it's <em>R &amp; D</em>
+  <ul>
+    <li>UTF Grids</li>
+    <li>PNG Tiles <em>(CartoCSS)</em></li>
+    <li><em>Vector</em> Tiles!</li>
+  </ul>
+</div>
+
+<div>Discovery, exploration, &amp; <em> direct access</em> to OSM</div>
+
+<div>
+  Find points, lines, polygons
+  <ul>
+  </ul>
+  <li><em>Points</em> <a target="_blank" href="http://koop.dc.esri.com/osm/points">/osm/points</a></li>
+  <li><em>Lines</em> <a target="_blank" href="http://koop.dc.esri.com/osm/lines">/osm/lines</a></li>
+  <li><em>Polygons</em> <a target="_blank" href="http://koop.dc.esri.com/osm/polygons">/osm/polygons</a></li>
+ </li>
+</div>
+<div>
+<ul>
+  <li><em>Points by </em> State <a target="_blank" href="http://koop.dc.esri.com/osm/points/state/count">/osm/points/state/count</a></li>
+  <li><em>Points by </em> County <a target="_blank" href="http://koop.dc.esri.com/osm/points/county/count">/osm/points/county/count</a></li>
+</ul>
+</div>
+
+<div><em>Cafes in a</em> State <a target="_blank" href="http://koop.dc.esri.com/osm/points/state/Colorado?where=amenity=%27cafe%27">/osm/points
+/state/Colorado?
+where=amenity='cafe'</a></div>
+
+<div><em>Cafes in a </em> State <a target="_blank" href="http://koop.dc.esri.com/osm/points/state/Colorado/field/amenity/cafe">/osm/points
+/state/Colorado
+/field/amenity/cafe</a></div>
+
+<div><em>Cafes in a </em> County <a target="_blank" href="http://koop.dc.esri.com/osm/points/state/Colorado/county/Boulder/field/amenity/cafe">/osm/points
+/state/Colorado
+/county/Boulder
+/field/amenity/cafe</a></div>
+
+
+<div>Distinct <em>values</em> <a target="_blank" href="http://koop.dc.esri.com/osm/points/distinct/amenity">/osm/points
+/distinct/amenity</a></div>
+
+<div>Table <em>fields </em> <a target="_blank" href="http://koop.dc.esri.com/osm/points/fields">/osm/points
+/fields</a></div>
+
+<div><em>Toilets in </em>Portland <a target="_blank" href="http://koop.dc.esri.com/osm/points/state/Oregon/county/Multnomah/field/amenity/toilets?limit=50">/osm/points
+/state/Oregon
+/county/Multnomah
+/field/amenity/toilets</a></div>
+
+<!--<div><em>curl</em> <a target="_blank" href="">http://koop.dc.esri.com/osm/points/state/Oregon/county/Multnomah/field/amenity/toilets?limit=50</a> | <em>geojsonio </em></div-->
+<div>build a UI? <a target="_blank" href="http://chelm.github.io/o.skoop.m/">o.skoop.m</a></div>
+<div>github.com/esri/Koop</div>
