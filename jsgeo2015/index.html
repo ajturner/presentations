@@ -58,6 +58,12 @@
 				border: 1px solid #888;
 				padding-right: 0px;
 			}
+			#gallery_koop {
+				background: url(images/koop.png) center no-repeat;
+			}
+			#gallery_geocommons {
+				background: url(images/geocommons.png);
+			}
 			#gallery_segment {
 				background: url(images/segment.png);
 			}
@@ -71,7 +77,7 @@
 				background: url(images/mundi.png);
 			}
 			#gallery_cedar {
-				background: url(images/mundi.png);
+				background: url(images/cedar.png) center no-repeat;
 			}
 			#gallery_mashboard {
 				background: url(images/mashboard.png);
@@ -117,17 +123,47 @@
 			</section>
 			<section>
 				<h1>ArcGI-WTF?</h1>
+				<code style="text-align:left">
+http://services.arcgis.com/VTyQ9soqVukalItT/
+arcgis/rest/services/FHA_Insurance_in_Force_by_Tract
+/FeatureServer/0
+?where=1%3D1&objectIds=&time=&geometry=
+&geometryType=esriGeometryEnvelope&inSR=
+&spatialRel=esriSpatialRelIntersects
+&distance=&units=esriSRUnit_Meter&outFields=*
+&returnGeometry=true&maxAllowableOffset=
+&geometryPrecision=&outSR=&returnIdsOnly=false
+&returnCountOnly=false&returnExtentOnly=false
+&returnDistinctValues=false&orderByFields=
+&groupByFieldsForStatistics=&outStatistics=
+&resultOffset=&resultRecordCount=1&returnZ=false
+&returnM=false&quantizationParameters=
+&f=pjson&token=
+				</code>
+			</section>
+			<section>
+				<h1>but <a target="_new" href="http://services.arcgis.com/VTyQ9soqVukalItT/arcgis/rest/services/FHA_Insurance_in_Force_by_Tract/FeatureServer/0?where=1%3D1&objectIds=&time=&geometry=&geometryType=esriGeometryEnvelope&inSR=&spatialRel=esriSpatialRelIntersects&distance=&units=esriSRUnit_Meter&outFields=*&returnGeometry=true&maxAllowableOffset=&geometryPrecision=&outSR=&returnIdsOnly=false&returnCountOnly=false&returnExtentOnly=false&returnDistinctValues=false&orderByFields=&groupByFieldsForStatistics=&outStatistics=&resultOffset=&resultRecordCount=1&returnZ=false&returnM=false&quantizationParameters=&f=pjson&token=">json</a></h1>
+				<h3>and <a href="http://geoservices.github.io/">docs</a></h3>
+			</section>
+			<section>
+				<img src="./images/terraformer_convert.png"></img>
+				<h2><a href="http://terraformer.io/">Terraformer.io</a></h2>
+			</section>			
+			<section>
+				<h1>and <a href="http://opendata.arcgis.com">Open Data</a></h1>
 			</section>
 		</section>
 		<section>
 			<table class="gallery">
 				<tr>
+					<td id="gallery_koop"><a href="http://koopjs.github.io">koop</a></td>
 					<td id="gallery_segment"><a href="http://ajturner.github.io/segment/">segment</a></td>
 					<td id="gallery_malette"><a href="http://benheb.github.io/malette-ui/">malette</a></td>
 					<td id="gallery_cedar"><a href="http://esri.github.io/cedar/">cedar</a></td>
 				</tr>
 				<tr>
-					<td id="gallery_version"><a href="http://esri.github.io/cedar/">version</a></td>
+					<td id="gallery_geocommons"><a href="https://github.com/geoiq/gc_data/tree/master/datasets">geocommons</a></td>
+					<td id="gallery_version"><a href="https://github.com/ajturner/segment">version</a></td>
 					<td id="gallery_mundi"><a href="http://benheb.github.io/mundi/">mundi</a></td>
 					<td id="gallery_mashboard"><a href="http://esri.github.io/cedar/examples/dashboard.html">mashboard</a></td>
 				</tr>				
