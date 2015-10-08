@@ -1,0 +1,182 @@
+<!doctype html>
+<html lang="en">
+
+	<head>
+		<meta charset="utf-8">
+
+		<title>OpenGIS: Technical and Implementation Issues</title>
+
+		<meta name="description" content="A presentation on OpenGIS">
+		<meta name="author" content="Andrew Turner">
+
+		<meta name="apple-mobile-web-app-capable" content="yes" />
+		<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+		<link rel="stylesheet" href="css/reveal.min.css">
+		<link rel="stylesheet" href="css/theme/simple.css" id="theme">
+
+		<!-- For syntax highlighting -->
+		<link rel="stylesheet" href="lib/css/zenburn.css">
+
+		<!-- If the query includes 'print-pdf', use the PDF print sheet -->
+		<script>
+			document.write( '<link rel="stylesheet" href="css/print/' + ( window.location.search.match( /print-pdf/gi ) ? 'pdf' : 'paper' ) + '.css" type="text/css" media="print">' );
+		</script>
+
+		<style type="text/css">
+			.overlay { opacity: 0.8; min-height: 90px;}
+			.overlay, .overlay h2, .overlay h1, .overlay h3, .overlay p, .overlay a:link, .overlay a:visited {
+				background-color: #000;
+				color: #FFF;
+				padding-bottom: 20px; 
+			}
+			.gallery td a:not(.image), .gallery td a:not(.image):hover {color: white;}
+			.gallery td a {
+				display: none;
+			}
+			.gallery td:hover a {
+			    display: block;
+			    position: relative;
+			    top: 0;
+		        text-align: center;
+			    background-color: #888;
+			    opacity: 0.7;
+			    color: white;
+			    height: 180px;
+			    padding-top: 120px;		    
+			}
+			.gallery {
+			    border-collapse: collapse;
+			}
+			.gallery tr {
+				height: 300px;
+			}
+			table.gallery tr td {
+				width: 300px;
+				border: 1px solid #888;
+				padding-right: 0px;
+			}
+			#gallery_segment {
+				background: url(images/segment.png);
+			}
+			#gallery_version {
+				background: url(images/version.png);
+			}
+			#gallery_malette {
+				background: url(images/malette.png);
+			}
+			#gallery_mundi {
+				background: url(images/mundi.png);
+			}
+			#gallery_cedar {
+				background: url(images/mundi.png);
+			}
+			#gallery_mashboard {
+				background: url(images/mashboard.png);
+			}
+			#footer {
+				display: block;
+				position:	absolute;
+				bottom: 10px;
+			}
+			#footer { background-color: #FFF; opacity: 0.8;}
+		</style>
+		<!--[if lt IE 9]>
+		<script src="lib/js/html5shiv.js"></script>
+		<![endif]-->
+	</head>
+
+	<body>
+
+	<div class="reveal">
+		<div class="slides">
+		<section data-background="images/geojson.jpg">
+			<div class="overlay">
+				<h1>esri r+d js</h1>
+				<h3>some projects</h3>
+				<p>
+					<a href="http://highearthorbit.com">Andrew Turner</a> / <a href="http://twitter.com/ajturner">@ajturner</a>
+				</p>
+			</div>
+		</section>
+		<section>
+			<section>
+				<h1>ArcGIS Open Data</h1>
+			</section>
+			<section>
+				<h1>Common API</h1>
+				<h3><a href="http://geoservices.github.io/">geoservices.github.io</a></h3>
+			</section>
+		</section>		
+
+		<section>
+			<section>
+				<h1>Powered by an API</h1>
+			</section>
+			<section>
+				<h1>ArcGI-WTF?</h1>
+			</section>
+		</section>
+		<section>
+			<table class="gallery">
+				<tr>
+					<td id="gallery_segment"><a href="http://ajturner.github.io/segment/">segment</a></td>
+					<td id="gallery_malette"><a href="http://benheb.github.io/malette-ui/">malette</a></td>
+					<td id="gallery_cedar"><a href="http://esri.github.io/cedar/">cedar</a></td>
+				</tr>
+				<tr>
+					<td id="gallery_version"><a href="http://esri.github.io/cedar/">version</a></td>
+					<td id="gallery_mundi"><a href="http://benheb.github.io/mundi/">mundi</a></td>
+					<td id="gallery_mashboard"><a href="http://esri.github.io/cedar/examples/dashboard.html">mashboard</a></td>
+				</tr>				
+			</table>
+		</section>
+		<section data-background="images/geojson.jpg">
+			<div class="overlay">
+				<h3><a href="http://ajturner.github.io/presentations/jsgeo2015/">ajturner.github.io/presentations/jsgeo2015/</a></h3>
+				<p>
+					<a href="http://highearthorbit.com">Andrew Turner</a> / <a href="http://twitter.com/ajturner">@ajturner</a>
+				</p>
+			</div>
+		</section>		
+		</div>
+
+	</div>
+	<div id="footer">
+		<img src="images/esri_dc.png"></img>
+	</div>
+		<script src="lib/js/head.min.js"></script>
+		<script src="js/reveal.min.js"></script>
+
+		<script>
+
+			// Full list of configuration options available here:
+			// https://github.com/hakimel/reveal.js#configuration
+			Reveal.initialize({
+				controls: true,
+				progress: true,
+				history: true,
+				center: true,
+
+				theme: Reveal.getQueryHash().theme, // available themes are in /css/theme
+				transition: Reveal.getQueryHash().transition || 'default', // default/cube/page/concave/zoom/linear/fade/none
+
+				// Parallax scrolling
+				// parallaxBackgroundImage: 'https://s3.amazonaws.com/hakim-static/reveal-js/reveal-parallax-1.jpg',
+				// parallaxBackgroundSize: '2100px 900px',
+
+				// Optional libraries used to extend on reveal.js
+				dependencies: [
+					{ src: 'lib/js/classList.js', condition: function() { return !document.body.classList; } },
+					{ src: 'plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } },
+					{ src: 'plugin/zoom-js/zoom.js', async: true, condition: function() { return !!document.body.classList; } },
+					{ src: 'plugin/notes/notes.js', async: true, condition: function() { return !!document.body.classList; } }
+				]
+			});
+
+		</script>
+
+	</body>
+</html>
