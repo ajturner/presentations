@@ -4,7 +4,7 @@
   <head>
     <meta charset="utf-8">
 
-    <title>ArcGIS API for JavaScript 4.0</title>
+    <title>ArcGIS Open Data: for Developers</title>
 
     <meta name="description" content="Presentation given at the Esri Devsummit DC 2016, about the ArcGIS Open Data for Developers">
     <meta name="author" content="Andrew Turner, Esri">
@@ -14,8 +14,8 @@
 
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
 
-    <link rel="stylesheet" href="./reveal.js/css/reveal.css">
-    <link rel="stylesheet" href="./reveal.js/css/theme/esri-dev-summit-2016.css" id="theme">
+    <link rel="stylesheet" href="reveal.js/css/reveal.css">
+    <link rel="stylesheet" href="reveal.js/css/theme/esri-dev-summit-2016.css" id="theme">
 
     <!-- Code syntax highlighting -->
     <link rel="stylesheet" href="./reveal.js/lib/css/solarized_dark.css">
@@ -30,11 +30,11 @@
       document.getElementsByTagName( 'head' )[0].appendChild( link );
       }
           if (window.location.search.match( /print-pdf/gi )) {
-            createLink('../reveal.js/css/print/pdf.css');
+            createLink('./reveal.js/css/print/pdf.css');
             createLink('./template/pdf.css');
           }
           else {
-            createLink('../reveal.js/css/print/paper.css');
+            createLink('./reveal.js/css/print/paper.css');
           }
     </script>
 
@@ -84,12 +84,12 @@
 
         // Optional reveal.js plugins
         dependencies: [
-          { src: './reveal.js/lib/js/classList.js', condition: function() { return !document.body.classList; } },
-          { src: './reveal.js/plugin/markdown/marked.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
-          { src: './reveal.js/plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
-          { src: './reveal.js/plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } },
-          { src: './reveal.js/plugin/zoom-js/zoom.js', async: true },
-          { src: './reveal.js/plugin/notes/notes.js', async: true }
+          { src: 'reveal.js/lib/js/classList.js', condition: function() { return !document.body.classList; } },
+          { src: 'reveal.js/plugin/markdown/marked.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+          { src: 'reveal.js/plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+          { src: 'reveal.js/plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } },
+          { src: 'reveal.js/plugin/zoom-js/zoom.js', async: true },
+          { src: 'reveal.js/plugin/notes/notes.js', async: true }
         ]
       });
 
