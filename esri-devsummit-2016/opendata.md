@@ -165,6 +165,8 @@ http://ajturner.github.io/presentations/esri-devsummit-2016
 - [Slack: #GISDevs](https://gisdevs.slack.com/)
 - [GeoNet: Open Data](https://geonet.esri.com/community/gis/web-gis/arcgis-open-data)
 
+### Fill out your survey
+
 ---
 
 <!-- .slide: data-background="../reveal.js/img/end.png" -->
