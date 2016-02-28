@@ -70,6 +70,7 @@ http://ajturner.github.io/presentations/esri-devsummit-2016
 - JSONAPI standard
 - Hypermedia API
 - [API Explorer](http://akharris.github.io/ember-arc-swag/#/api-explorer)
+- [Open Data Search](https://github.com/esridc/opendata-search-component)
 
 ---
 
@@ -111,7 +112,7 @@ winnow.query(features, options)
 # Federated + Embeddable Search
 
 - [Open Data Search](https://github.com/esridc/opendata-search-component)
-- [Charlotte Data.json](clt.charlotte.opendata.arcgis.com/data.json) + [Data.gov integration](http://catalog.data.gov/dataset?q=charlotte&sort=score+desc%2C+name+asc)
+- [Charlotte Data.json](http://clt.charlotte.opendata.arcgis.com/data.json) + [Data.gov integration](http://catalog.data.gov/dataset?q=charlotte&sort=score+desc%2C+name+asc)
 
 ---
 
@@ -139,7 +140,7 @@ winnow.query(features, options)
 # Extensible and Modular
 
 - Ember
-- (UN SDG Dashboard)[https://github.com/esri/sdg-dash]
+- [UN SDG Dashboard](https://github.com/esri/sdg-dash)
 
 ---
 
@@ -164,6 +165,8 @@ http://ajturner.github.io/presentations/esri-devsummit-2016
 
 - [Slack: #GISDevs](https://gisdevs.slack.com/)
 - [GeoNet: Open Data](https://geonet.esri.com/community/gis/web-gis/arcgis-open-data)
+- andrew@esri.com
+- @ajturner 
 
 ### Fill out your survey
 
