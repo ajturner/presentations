@@ -1,5 +1,5 @@
 
-<!-- .slide: data-background="../reveal.js/img/title.png" -->
+<!-- .slide: data-background="./reveal.js/img/title.png" -->
 
 #ArcGIS Open Data
 ##for Developers
@@ -172,4 +172,4 @@ http://ajturner.github.io/presentations/esri-devsummit-2016
 
 ---
 
-<!-- .slide: data-background="../reveal.js/img/end.png" -->
+<!-- .slide: data-background="./reveal.js/img/end.png" -->
