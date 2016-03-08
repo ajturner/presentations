@@ -1,17 +1,17 @@
 
 <!-- .slide: data-background="./reveal.js/img/title.png" -->
 
-#ArcGIS Open Data
-##for Developers
+#Deep Customization of ArcGIS Open Data
 
-Andrew Turner, @ajturner
-andrew@esri.com
+Andrew Turner, @ajturner, andrew@esri.com
+
+Dave Bouwman @dbouwman, dbouwman@esri.com
 
 ---
 
 # Agenda
 
-http://ajturner.github.io/presentations/esri-devsummit-2016
+http://ajturner.github.io/presentations/ds-2016-od-customization
 
 - ArcGIS Open Data
 - Architecture
@@ -67,10 +67,10 @@ http://ajturner.github.io/presentations/esri-devsummit-2016
 
 # API Explorer
 
-- JSONAPI standard
-- Hypermedia API
+- [JSONAPI standard](http://jsonapi.org/)
+- [Hypermedia API](https://opendata.arcgis.com/api/v2/datasets/8b1611f38f3946969692679ca4e9dac7_39)
 - [API Explorer](http://akharris.github.io/ember-arc-swag/#/api-explorer)
-- [Open Data Search](https://github.com/esridc/opendata-search-component)
+
 
 ---
 
@@ -120,10 +120,28 @@ winnow.query(features, options)
 
 - [Open Data-Backbone](https://github.com/mjuniper/OpenData-Backbone)
 - [Open Data-Ember](https://github.com/mjuniper/OpenData-ember)
+- [Open Data Search](https://github.com/esridc/opendata-search-component)
 
 ---
 
 # Road Ahead
+### More Open Source Starters
+- OpenData-React
+  - starter app for people looking to build w/ react
+- OpenData-Angular2
+  - starter app built on Angular 2
+
+---
+
+#Road Ahead
+
+### Open Source UI projects
+- EmberJs Application
+  - "multi-tenant" system
+  - i18n to 26 languages
+  - you *can* fork and run this yourself...
+  - much simpler to work from one of the starters
+- Ember add-on with our components
 
 ---
 
@@ -154,7 +172,7 @@ winnow.query(features, options)
 
 ## Calcite shared branding
 
-- [Calcite-Bootrap](http://)
+- [Calcite-Bootrap](http://esri.github.io/calcite-bootstrap/)
 - [Integrated Solutions](http://arcgis.github.io/multilayer-report/mockOrgOpenDataSite.html)
 
 ---
@@ -165,8 +183,8 @@ http://ajturner.github.io/presentations/esri-devsummit-2016
 
 - [Slack: #GISDevs](https://gisdevs.slack.com/)
 - [GeoNet: Open Data](https://geonet.esri.com/community/gis/web-gis/arcgis-open-data)
-- andrew@esri.com
-- @ajturner
+- andrew@esri.com / @ajturner
+- dbouwman@esri.com / @dbouwman
 
 ### Fill out your survey
 
