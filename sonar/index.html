@@ -1,0 +1,296 @@
+<!doctype html>
+<html lang="en">
+
+	<head>
+		<meta charset="utf-8">
+
+		<title>Sonar - Esri R&amp;D</title>
+
+		<meta name="description" content="Sonar chartbot">
+		<meta name="author" content="Andrew Turner">
+
+		<meta name="apple-mobile-web-app-capable" content="yes">
+		<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
+
+		<link rel="stylesheet" target="_blank" href="css/reveal.css">
+		<link rel="stylesheet" target="_blank" href="css/theme/esri-dev-summit-2016.css" id="theme">
+
+		<!-- Code syntax highlighting -->
+		<link rel="stylesheet" target="_blank" href="lib/css/solarized_dark.css">
+
+		<!-- Printing and PDF exports -->
+		<script>
+			var link = document.createElement( 'link' );
+			link.rel = 'stylesheet';
+			link.type = 'text/css';
+			link.href = window.location.search.match( /print-pdf/gi ) ? 'css/print/pdf.css' : 'css/print/paper.css';
+			document.getElementsByTagName( 'head' )[0].appendChild( link );
+		</script>
+
+		<!--[if lt IE 9]>
+		<script src="lib/js/html5shiv.js"></script>
+		<![endif]-->
+	</head>
+
+	<body>
+
+		<div class="reveal">
+
+			<!-- Any section element inside of this container is displayed as a slide -->
+			<div class="slides">
+				<section data-background2="img/bg-2.png" data-background-size="cover">
+					<h3>Chatbots as an Interface for Spatial Data and Analysis</h3>
+					<p>
+						<small>Andrew Turner / <a target="_blank" href="http://twitter.com/ajturner">@ajturner</a></small><br/>
+						<small>Director, Esri R&amp;D DC</small>
+					</p>
+				</section>
+
+				<section data-background-size="cover">
+					<section data-background="img/landscape.jpg" >
+						<div class="standout"><h2>Maps</h2>
+						<span>
+							Visualize structure
+						</span></div>
+					</section>
+					<section data-background="img/3dprint.jpg">
+						<div class="standout"><h2>Maps</h2>
+						<span>
+							Take many forms
+						</span></div>
+					</section>
+					<section data-background="img/stick-chart.jpg">
+						<div class="standout">
+							<h2>Geographic</h2>
+						<span class="fragment">
+							doesn't mean <em>cartographic</em>
+						</span></div>
+					</section>
+				</section>
+				<section data-background-size="cover">
+					<section data-background="img/city-engine.png" >
+						<div class="standout">
+							<h2>Geographic Systems</h2>
+							<span class="fragment">
+								Manage public, physical infrastructure
+							</span>
+
+						</div>
+					</section>
+					<section data-background="img/nyc.jpg" >
+						<div class="standout">
+							<h2>Infrastructure</h2>
+						<span class="fragment">
+							Supports Community, and People
+						</span>
+					</div>
+					</section>
+					<section data-background="img/people.jpg" >
+						<div class="standout"><h2>People</h2>
+						<span class="fragment">
+							have many perspectives
+						</span></div>
+					</section>
+				</section>
+				<section>
+					<section data-background="img/citizen-engagement.jpg" data-background-size="cover">
+						<h2 class="standout">Data-Driven Citizenship</h2>
+					</section>
+					<section data-background="img/infrastructure.jpg" data-background-size="cover">
+						<h2 class="standout">Public Digital Infrastructure</h2>
+					</section>
+					<section data-background="" data-background-size="cover">
+						<div class="standout">
+							<h2>Accessible</h2>
+						<span class="fragment">
+							<em>Meet people where they are...</em>
+						</span>
+					</div class="standout">
+					</section>
+					<section data-background="img/street.jpg"  data-background-size="cover">
+						<div class="standout"><h2>MyStreet</h2>
+						<span>
+							<a target="_blank" href="http://mystreet.surge.sh/9c31d3a441ed4e40beb2f6c5adce70cb?loc=118%20West%2022nd%20Street%2C%20New%20York%2C%20NY">"What's going on around me?"</a>
+						</span></div>
+					</section>
+				</section>
+
+				<section data-background2="img/bg-7.png" data-background-size="cover">
+					<section>
+						<div class="standout"><h2>Chatbots</h2></div>
+						<aside class="notes">
+							The only good reason to add voice as an input method or audio as
+an output method is because it makes the product better for the
+user.
+						</aside>
+					</section>
+					<section data-background="img/phones.png" data-background-size="cover">
+						<div class="standout"><h3 class="fragment shrink">IVR</h3></div class="standout">
+					</section>
+					<section data-background="img/switchboard.jpg" data-background-size="cover">
+						<div class="standout">
+						<div class="fragment"> <h2>Modes</h2>
+
+						Conversation | Inquiry
+</div>
+						<div class="fragment"><h2>Interfaces</h2>
+
+						Voice | Hybrid
+					</div>
+					</div>
+					</section>
+					<section data-markdown>
+						## Considerations
+
+						- Discoverability vs. Predictability
+						- Privacy
+						- Accessibility
+					</section>
+					<section data-markdown>
+						## 'bot'
+
+						- Scripted
+						- AI (aritificial intelligence)
+					</section>
+				</section>
+
+				<section data-background2="img/bg-1.png" data-background-size="cover">
+					<section>
+						<h2>Sonar</h2>
+						<img src="https://github.com/Esri/sonar/raw/master/images/sonar_108.png" style="float: left; background-color: white; border: none;" />
+						<em>Talk to your infrastructure</em>
+					</section>
+					<section>
+						<ul>
+							<li class="fragment">
+								Slack
+							</li>
+							<li class="fragment">
+								Facebook <a target="_blank" href="https://facebook.com/sonarhere">fb://sonarhere</a>
+							</li>
+							<li class="fragment">
+								<a target="_blank" href="https://echosim.io/">Alexa</a>
+							</li>
+						</ul>
+					</section>
+				</section>
+
+				<section data-background="img/decomposed.jpg" data-background-size="cover">
+					<section>
+						<h2>Sonar: decomposed</h2>
+					</section>
+					<section data-background="" data-background-size="cover">
+					<div class="standout">
+					<img src="img/sonar-architecture.png"  />
+				</div>
+					</section>
+					<section>
+						<h2>Architecture</h2>
+						<ul>
+							<li class="fragment">
+								<h3>Sonar.js</h3>
+							</li>
+							<li class="fragment">
+								<h3>Claudia.js</h3>
+							</li>
+							<li class="fragment">
+								<h3>Amazon Web Services</h3>
+								<ul>
+									<li class="fragment">
+										Lambda functions
+									</li>
+									<li class="fragment">
+										API Gateway
+									</li>
+									<li class="fragment">
+										Alexa skills
+									</li>
+								</ul>
+							</li>
+						</ul>
+					</section>
+					<section>
+						<h3>Design for Humans...</h3>
+						<ul>
+							<li class="fragment">Mon -> Monday</li>
+							<li class="fragment">Tue -> Tuesday</li>
+							<li class="fragment">Thu -> Thursday</li>
+							<li class="fragment">Thurs -> Thursday</li>
+						</ul>
+					</section>
+					<section>
+						<h3>Arc<strong>GIS</strong></h3>
+						<p>
+						<ul>
+							<li class="fragment">
+								Geoenrichment
+							</li>
+							<li class="fragment">
+								Geocoding
+							</li>
+							<li class="fragment">
+								Routing
+							</li>
+						</ul>
+						</p>
+<p>
+						<small><a target="_blank" href="https://developers.arcgis.com">developers.arcgis.com</a></small>
+						</p>
+					</section>
+					<section data-background2="img/bg-4.png">
+						<strong>All Free</strong>
+					</section>
+				</section>
+
+				<section data-markdown data-background2="img/bg-1.png" data-background-size="cover">
+					_experiment_
+
+					[gh://esri/sonar](https://github.com/esri/sonar)
+
+					Andrew Turner
+
+					andrew@esri.com | [@ajturner](https://twitter.com/ajturner)
+				</section>
+
+				<section data-background2="img/end.png" data-background-size="cover"></section>
+
+			</div>
+
+		</div>
+
+		<script src="lib/js/head.min.js"></script>
+		<script src="js/reveal.js"></script>
+
+		<script>
+
+			// Full list of configuration options available at:
+			// https://github.com/hakimel/reveal.js#configuration
+			Reveal.initialize({
+				controls: false,
+				progress: true,
+				history: true,
+				center: true,
+
+				parallaxBackgroundImage: "img/bg-1.png",
+				parallaxBackgroundSize: "2100px 900px",
+				parallaxBackgroundHorizontal: "400px",
+				parallaxBackgroundVertical: "400px",
+				transition: 'slide', // none/fade/slide/convex/concave/zoom
+
+				// Optional reveal.js plugins
+				dependencies: [
+					{ src: 'lib/js/classList.js', condition: function() { return !document.body.classList; } },
+					{ src: 'plugin/markdown/marked.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+					{ src: 'plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+					{ src: 'plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } },
+					{ src: 'plugin/zoom-js/zoom.js', async: true },
+					{ src: 'plugin/notes/notes.js', async: true }
+				]
+			});
+
+		</script>
+
+	</body>
+</html>
