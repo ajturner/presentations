@@ -1,16 +1,309 @@
 <!DOCTYPE html>
-<html><head><title>Andrew Turner's presentations</title></head>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Talks by Andrew Turner</title>
+  <meta name="description" content="Slides from Andrew Turner's talks on open data, open source, web mapping, and civic technology, 2013–2017.">
+  <meta property="og:title" content="Talks by Andrew Turner">
+  <meta property="og:description" content="Slides on open data, open source, web mapping, and civic technology.">
+  <meta property="og:image" content="https://ajturner.github.io/presentations/thumbs/sonar.jpg">
+  <meta property="og:type" content="website">
+  <meta name="twitter:card" content="summary_large_image">
+  <style>
+    :root {
+      --bg: #fbfaf7;
+      --surface: #ffffff;
+      --text: #1d1d1b;
+      --muted: #5f5e5a;
+      --line: #e4e1da;
+      --accent: #0b6e69;
+      --accent-soft: #e2f1ef;
+      --chip: #f1efe9;
+      --shadow: 0 1px 2px rgba(0,0,0,.04), 0 6px 20px rgba(0,0,0,.06);
+    }
+    @media (prefers-color-scheme: dark) {
+      :root {
+        --bg: #141413;
+        --surface: #1e1e1c;
+        --text: #ecebe6;
+        --muted: #a3a19a;
+        --line: #33322f;
+        --accent: #5cc8bf;
+        --accent-soft: #1d3533;
+        --chip: #2a2a27;
+        --shadow: 0 1px 2px rgba(0,0,0,.3), 0 6px 20px rgba(0,0,0,.3);
+      }
+    }
+    * { box-sizing: border-box; }
+    html { -webkit-text-size-adjust: 100%; }
+    body {
+      margin: 0;
+      background: var(--bg);
+      color: var(--text);
+      font: 16px/1.55 -apple-system, BlinkMacSystemFont, "Segoe UI", Inter, Helvetica, Arial, sans-serif;
+    }
+    a { color: var(--accent); }
+    .wrap { max-width: 1120px; margin: 0 auto; padding: 0 16px; }
+
+    header.intro { padding-top: 64px; padding-bottom: 32px; }
+    .eyebrow { font-size: 13px; letter-spacing: .08em; text-transform: uppercase; color: var(--muted); margin: 0 0 8px; }
+    h1 { font-size: clamp(32px, 5vw, 48px); line-height: 1.1; margin: 0 0 16px; letter-spacing: -.02em; }
+    .lede { font-size: 18px; color: var(--muted); max-width: 680px; margin: 0 0 20px; }
+    .links { display: flex; flex-wrap: wrap; gap: 8px 20px; font-size: 15px; }
+
+    nav.filters { position: sticky; top: 0; z-index: 2; background: var(--bg); border-bottom: 1px solid var(--line); padding: 12px 0; }
+    .chips { display: flex; flex-wrap: wrap; gap: 8px; }
+    .chip {
+      border: 1px solid var(--line); background: var(--chip); color: var(--text);
+      font: inherit; font-size: 14px; padding: 6px 14px; border-radius: 999px; cursor: pointer;
+    }
+    .chip[aria-pressed="true"] { background: var(--accent); border-color: var(--accent); color: var(--bg); }
+    .chip:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; }
+
+    section.featured { padding: 40px 0 8px; }
+    h2 { font-size: 14px; letter-spacing: .08em; text-transform: uppercase; color: var(--muted); margin: 0 0 16px; font-weight: 600; }
+    .year { display: flex; align-items: baseline; gap: 12px; margin: 40px 0 16px; }
+    .year h2 { margin: 0; font-size: 28px; letter-spacing: -.01em; text-transform: none; color: var(--text); }
+    .year span { color: var(--muted); font-size: 14px; }
+
+    .grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(min(300px, 100%), 1fr)); gap: 20px; }
+    .card {
+      display: flex; flex-direction: column; background: var(--surface); border: 1px solid var(--line);
+      border-radius: 12px; overflow: hidden; box-shadow: var(--shadow); transition: transform .15s ease;
+    }
+    .card:hover { transform: translateY(-2px); }
+    .card a.thumb { display: block; aspect-ratio: 16 / 9; background: #000; }
+    .card img { display: block; width: 100%; height: 100%; object-fit: cover; }
+    .body { padding: 16px 18px 18px; display: flex; flex-direction: column; gap: 8px; flex: 1; }
+    .meta { font-size: 13px; color: var(--muted); }
+    .card h3 { font-size: 19px; line-height: 1.25; margin: 0; letter-spacing: -.01em; }
+    .card h3 a { color: var(--text); text-decoration: none; }
+    .card h3 a:hover { color: var(--accent); }
+    .card p { margin: 0; color: var(--muted); font-size: 15px; }
+    .tags { display: flex; flex-wrap: wrap; gap: 6px; margin-top: auto; padding-top: 8px; }
+    .tag { font-size: 12px; padding: 2px 8px; border-radius: 4px; background: var(--chip); color: var(--muted); }
+    .tag.notes { background: var(--accent-soft); color: var(--accent); }
+
+    .featured .card { flex-direction: row; }
+    .featured .card a.thumb { flex: 0 0 52%; aspect-ratio: auto; min-height: 260px; }
+    .featured .body { padding: 28px; justify-content: center; }
+    .featured h3 { font-size: 26px; }
+    @media (max-width: 760px) {
+      .featured .card { flex-direction: column; }
+      .featured .card a.thumb { flex: none; aspect-ratio: 16 / 9; min-height: 0; }
+      .featured .body { padding: 18px; }
+      header.intro { padding-top: 40px; }
+    }
+
+    .empty { display: none; color: var(--muted); padding: 24px 0; }
+    .hidden { display: none !important; }
+
+    footer { border-top: 1px solid var(--line); margin-top: 64px; padding-top: 24px; padding-bottom: 48px; color: var(--muted); font-size: 14px; }
+    kbd { font: 12px ui-monospace, Menlo, monospace; border: 1px solid var(--line); border-bottom-width: 2px; border-radius: 4px; padding: 0 5px; background: var(--surface); }
+  </style>
+</head>
 <body>
-<ul>
-  <li><a href="hesn/">USAID HESN</a>, November 2013</li>
-  <li><a href="jsgeo2013/">js.geo 2013</a>, January 2013</li>
-  <li><a href="esri-opensource/">Going Open-Source with Esri</a></li>
-  <li><a href="esri-geospatialopportunities/">Opportunities in GIS</a></li>
-  <li><a href="social-coding/">Social Coding</a></li>
-  <li><a href="aag2014/">AAG 2014 Workshop: OpenGIS</a></li>
-  <li><a href="esri-devsummit-2016/">Esri DevSummit 2016</a></li>
-  <li><a href="esri-devsummit-2016/malette">Malette @ DevSummit 2016</a></li>
-  <li><a href="geodev-2016-cedar">GeoDev 2016 Cedar</a></li>
-</ul>
+  <header class="intro wrap">
+    <p class="eyebrow">Andrew Turner · Talks 2013–2017</p>
+    <h1>Open data, open source, and maps for people</h1>
+    <p class="lede">Slides from conference talks and workshops on open government data, building geospatial tools in the open, JavaScript mapping, and new interfaces to civic information.</p>
+    <div class="links">
+      <a href="https://twitter.com/ajturner">@ajturner</a>
+      <a href="https://github.com/ajturner">GitHub</a>
+      <a href="https://github.com/ajturner/presentations">Source for these slides</a>
+    </div>
+  </header>
+
+  <nav class="filters" aria-label="Filter talks by topic">
+    <div class="wrap chips" role="group">
+      <button class="chip" data-filter="all" aria-pressed="true">All talks</button>
+      <button class="chip" data-filter="opendata" aria-pressed="false">Open data</button>
+      <button class="chip" data-filter="opensource" aria-pressed="false">Open source</button>
+      <button class="chip" data-filter="webmaps" aria-pressed="false">JavaScript &amp; web maps</button>
+      <button class="chip" data-filter="civic" aria-pressed="false">Civic tech &amp; interfaces</button>
+    </div>
+  </nav>
+
+  <main class="wrap">
+    <section class="featured" data-section="featured">
+      <h2>Most recent</h2>
+      <article class="card" data-topics="civic opendata">
+        <a class="thumb" href="sonar/"><img src="thumbs/sonar.jpg" alt="Title slide: Chatbots as an Interface for Spatial Data and Analysis" loading="eager"></a>
+        <div class="body">
+          <div class="meta">June 2017 · Esri R&amp;D DC</div>
+          <h3><a href="sonar/">Chatbots as an Interface for Spatial Data and Analysis</a></h3>
+          <p>Why maps are only one way to show geography, and how Sonar lets residents ask Slack, Facebook Messenger, or Alexa "what's going on around me?" Covers the serverless architecture and lessons from designing voice interfaces.</p>
+          <div class="tags"><span class="tag">Chatbots</span><span class="tag">Voice UI</span><span class="tag">Civic tech</span><span class="tag notes">Speaker notes</span></div>
+        </div>
+      </article>
+    </section>
+
+    <div class="year" data-year><h2>2016</h2><span>ArcGIS Open Data &amp; data visualization</span></div>
+    <div class="grid">
+      <article class="card" data-topics="webmaps opendata">
+        <a class="thumb" href="geodev-2016-cedar/"><img src="thumbs/geodev-2016-cedar.jpg" alt="Title slide: Charts and Custom Visualizations Beyond the Map" loading="lazy"></a>
+        <div class="body">
+          <div class="meta">October 2016 · Esri GeoDev</div>
+          <h3><a href="geodev-2016-cedar/">Charts &amp; Custom Visualizations Beyond the Map</a></h3>
+          <p>Introducing Cedar, a library for building charts directly from geographic feature services.</p>
+          <div class="tags"><span class="tag">Cedar</span><span class="tag">Data viz</span><span class="tag">Keynote export</span></div>
+        </div>
+      </article>
+      <article class="card" data-topics="opendata webmaps opensource">
+        <a class="thumb" href="ds-2016-od-customization/"><img src="thumbs/ds-2016-od-customization.jpg" alt="Title slide: Deep Customization of ArcGIS Open Data" loading="lazy"></a>
+        <div class="body">
+          <div class="meta">March 2016 · Esri Developer Summit · with Dave Bouwman</div>
+          <h3><a href="ds-2016-od-customization/">Deep Customization of ArcGIS Open Data</a></h3>
+          <p>Theming and extending open data sites, the JSON API, open-source starter apps in Ember, React, and Angular, and the road to Hub.</p>
+          <div class="tags"><span class="tag">ArcGIS Open Data</span><span class="tag">APIs</span><span class="tag">Ember</span></div>
+        </div>
+      </article>
+      <article class="card" data-topics="opendata webmaps opensource">
+        <a class="thumb" href="esri-devsummit-2016/"><img src="thumbs/esri-devsummit-2016.jpg" alt="Title slide: ArcGIS Open Data for Developers" loading="lazy"></a>
+        <div class="body">
+          <div class="meta">March 2016 · Esri Developer Summit</div>
+          <h3><a href="esri-devsummit-2016/">ArcGIS Open Data for Developers</a></h3>
+          <p>Architecture of ArcGIS Open Data, the API explorer, Koop and Winnow, federated search with Data.gov, and early Hub sites.</p>
+          <div class="tags"><span class="tag">ArcGIS Open Data</span><span class="tag">Koop</span><span class="tag">Hub</span></div>
+        </div>
+      </article>
+    </div>
+
+    <div class="year" data-year><h2>2015</h2></div>
+    <div class="grid">
+      <article class="card" data-topics="webmaps opensource opendata">
+        <a class="thumb" href="jsgeo2015/"><img src="thumbs/jsgeo2015.jpg" alt="Title slide: esri r+d js, some projects" loading="lazy"></a>
+        <div class="body">
+          <div class="meta">October 2015 · js.geo</div>
+          <h3><a href="jsgeo2015/">Esri R&amp;D JavaScript: Some Projects</a></h3>
+          <p>A tour of the open GeoServices API, making FeatureServer queries readable, Terraformer, and the R&amp;D lab's open-source projects.</p>
+          <div class="tags"><span class="tag">GeoServices</span><span class="tag">Terraformer</span></div>
+        </div>
+      </article>
+    </div>
+
+    <div class="year" data-year><h2>2014</h2></div>
+    <div class="grid">
+      <article class="card" data-topics="webmaps opensource opendata">
+        <a class="thumb" href="jsgeo2014/"><img src="thumbs/jsgeo2014.jpg" alt="Title slide: js.geo 2014 Koop" loading="lazy"></a>
+        <div class="body">
+          <div class="meta">September 2014 · js.geo</div>
+          <h3><a href="jsgeo2014/">Koop: ETL for APIs</a></h3>
+          <p>Turning GitHub, Gists, Socrata, and OpenStreetMap into GeoJSON and feature services, with live URL queries like "every public toilet in Portland."</p>
+          <div class="tags"><span class="tag">Koop</span><span class="tag">GeoJSON</span><span class="tag">OpenStreetMap</span></div>
+        </div>
+      </article>
+      <article class="card" data-topics="opensource opendata">
+        <a class="thumb" href="aag2014/"><img src="thumbs/aag2014.jpg" alt="Title slide: OpenGIS, Technical Issues" loading="lazy"></a>
+        <div class="body">
+          <div class="meta">April 2014 · AAG Annual Meeting workshop</div>
+          <h3><a href="aag2014/">OpenGIS: The Nuts &amp; Bolts of Open</a></h3>
+          <p>Why "open" means code, specs, formats, and licenses. Pragmatism over standards, small pieces loosely joined, and hybrid architectures.</p>
+          <div class="tags"><span class="tag">Standards</span><span class="tag">GeoJSON</span><span class="tag">Workshop</span></div>
+        </div>
+      </article>
+      <article class="card" data-topics="opendata">
+        <a class="thumb" href="opendata/"><img src="thumbs/opendata.jpg" alt="Title slide: Open Data" loading="lazy"></a>
+        <div class="body">
+          <div class="meta">March 2014 · Esri DC</div>
+          <h3><a href="opendata/">Open Data: Don't Move Your Data</a></h3>
+          <p>Four principles for open data: discoverable, explorable, accessible, collaborative. Introduces ArcGIS Open Data.</p>
+          <div class="tags"><span class="tag">ArcGIS Open Data</span></div>
+        </div>
+      </article>
+    </div>
+
+    <div class="year" data-year><h2>2013</h2><span>Esri goes open</span></div>
+    <div class="grid">
+      <article class="card" data-topics="opendata civic">
+        <a class="thumb" href="hesn/"><img src="thumbs/hesn.jpg" alt="Title slide: Open Data for Innovation" loading="lazy"></a>
+        <div class="body">
+          <div class="meta">November 2013 · USAID Higher Education Solutions Network</div>
+          <h3><a href="hesn/">Open Data for Innovation</a></h3>
+          <p>What makes data open, the $3 trillion McKinsey estimate, and development examples from USAID, OpenStreetMap in Kibera, and World Bank Mapping for Results.</p>
+          <div class="tags"><span class="tag">International development</span><span class="tag">Policy</span></div>
+        </div>
+      </article>
+      <article class="card" data-topics="opensource">
+        <a class="thumb" href="social-coding/"><img src="thumbs/social-coding.jpg" alt="Title slide: Social Coding with Git and GitHub" loading="lazy"></a>
+        <div class="body">
+          <div class="meta">July 2013</div>
+          <h3><a href="social-coding/">Social Coding with Git &amp; GitHub</a></h3>
+          <p>A leveled tutorial from first commit to pull requests and rebasing, plus Gists, bl.ocks, wikis, and gh-pages.</p>
+          <div class="tags"><span class="tag">Git</span><span class="tag">Tutorial</span></div>
+        </div>
+      </article>
+      <article class="card" data-topics="civic opendata webmaps">
+        <a class="thumb" href="esri-geospatialopportunities/"><img src="thumbs/esri-geospatialopportunities.jpg" alt="Title slide: Opportunities in Geospatial" loading="lazy"></a>
+        <div class="body">
+          <div class="meta">April 2013</div>
+          <h3><a href="esri-geospatialopportunities/">Opportunities in Geospatial</a></h3>
+          <p>Five shifts reshaping GIS: digital-native maps, mobile context, social collaboration, big data, and realtime feeds, illustrated with the NYC Marathon.</p>
+          <div class="tags"><span class="tag">Trends</span><span class="tag">Big data</span><span class="tag notes">Speaker notes</span></div>
+        </div>
+      </article>
+      <article class="card" data-topics="opensource">
+        <a class="thumb" href="esri-opensource/"><img src="thumbs/esri-opensource.jpg" alt="Title slide: Going Open-Source with Esri" loading="lazy"></a>
+        <div class="body">
+          <div class="meta">January 2013</div>
+          <h3><a href="esri-opensource/">Going Open-Source with Esri</a></h3>
+          <p>Why a commercial GIS company started building in the open: the cathedral and the bazaar, Apache 2 by default, and positive feedback loops with developers.</p>
+          <div class="tags"><span class="tag">Open source</span><span class="tag">Strategy</span><span class="tag notes">Speaker notes</span></div>
+        </div>
+      </article>
+      <article class="card" data-topics="webmaps opensource">
+        <a class="thumb" href="jsgeo2013/"><img src="thumbs/jsgeo2013.jpg" alt="Title slide: Mapstraction" loading="lazy"></a>
+        <div class="body">
+          <div class="meta">January 2013 · js.geo</div>
+          <h3><a href="jsgeo2013/">Mapstraction</a></h3>
+          <p>One JavaScript API across Google, Esri, Leaflet, OpenLayers and a dozen other map providers, and why abstraction means freedom.</p>
+          <div class="tags"><span class="tag">Mapstraction</span><span class="tag">Lightning talk</span></div>
+        </div>
+      </article>
+    </div>
+
+    <p class="empty" id="empty">No talks match this topic.</p>
+  </main>
+
+  <footer class="wrap">
+    <p>Most decks run in the browser. Use <kbd>→</kbd> or <kbd>Space</kbd> to advance. On decks marked "Speaker notes," press <kbd>S</kbd> to open the notes.</p>
+    <p>Slides © Andrew Turner. Built with reveal.js, big.js, and Keynote.</p>
+  </footer>
+
+  <script>
+    (function () {
+      var chips = document.querySelectorAll('.chip');
+      var cards = document.querySelectorAll('.card');
+      var empty = document.getElementById('empty');
+
+      function apply(filter) {
+        chips.forEach(function (c) { c.setAttribute('aria-pressed', String(c.dataset.filter === filter)); });
+        var shown = 0;
+        cards.forEach(function (card) {
+          var match = filter === 'all' || card.dataset.topics.split(' ').indexOf(filter) !== -1;
+          card.classList.toggle('hidden', !match);
+          if (match) shown++;
+        });
+        // Hide year headings and the featured section when they have no visible cards.
+        document.querySelectorAll('[data-year]').forEach(function (h) {
+          var grid = h.nextElementSibling;
+          var any = grid.querySelectorAll('.card:not(.hidden)').length > 0;
+          h.classList.toggle('hidden', !any);
+          grid.classList.toggle('hidden', !any);
+        });
+        var featured = document.querySelector('[data-section="featured"]');
+        featured.classList.toggle('hidden', !featured.querySelector('.card:not(.hidden)'));
+        empty.style.display = shown ? 'none' : 'block';
+        try { history.replaceState(null, '', filter === 'all' ? location.pathname : '#' + filter); } catch (e) {}
+      }
+
+      chips.forEach(function (c) {
+        c.addEventListener('click', function () { apply(c.dataset.filter); });
+      });
+      var initial = location.hash.slice(1);
+      if (document.querySelector('.chip[data-filter="' + initial + '"]')) apply(initial);
+    })();
+  </script>
 </body>
 </html>

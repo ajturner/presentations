@@ -1,4 +1,7 @@
-# Presentations by Andrew Turner
+# Talks by Andrew Turner
 
-* [index](http://ajturner.github.com/presentations/)
-* [js.geo 2013](http://ajturner.github.com/presentations/jsgeo2013/)
+Slides from talks on open data, open source, web mapping, and civic technology, 2013–2017.
+
+**Browse them at [ajturner.github.io/presentations](https://ajturner.github.io/presentations/).**
+
+Each folder is a self-contained deck (reveal.js, big.js, or a Keynote HTML export). Thumbnails for the homepage live in `thumbs/`.
