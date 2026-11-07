@@ -1,5 +1,5 @@
 
-<!-- .slide: data-background="./reveal.js/img/title.png" -->
+<!-- .slide: data-background="../shared/reveal-devsummit-2016/img/title.png" -->
 
 #Deep Customization of ArcGIS Open Data
 
@@ -149,9 +149,9 @@ winnow.query(features, options)
 
 ![Hub](images/opendata_hub.png)
 
-- (Los Angeles Hub)[http://geohub.lacity.org/]
-- (Washington Cities Hub)[http://data1.awcnet.opendata.arcgis.com/]
-- (Denton Texas Hub)[http://data.dentontxgis.opendata.arcgis.com/]
+- [Los Angeles Hub](http://geohub.lacity.org/)
+- [Washington Cities Hub](http://data1.awcnet.opendata.arcgis.com/)
+- [Denton Texas Hub](http://data.dentontxgis.opendata.arcgis.com/)
 
 ---
 
@@ -172,7 +172,7 @@ winnow.query(features, options)
 
 ## Calcite shared branding
 
-- [Calcite-Bootrap](http://esri.github.io/calcite-bootstrap/)
+- [Calcite-Bootstrap](http://esri.github.io/calcite-bootstrap/)
 - [Integrated Solutions](http://arcgis.github.io/multilayer-report/mockOrgOpenDataSite.html)
 
 ---
@@ -190,4 +190,4 @@ http://ajturner.github.io/presentations/esri-devsummit-2016
 
 ---
 
-<!-- .slide: data-background="./reveal.js/img/end.png" -->
+<!-- .slide: data-background="../shared/reveal-devsummit-2016/img/end.png" -->

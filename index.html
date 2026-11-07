@@ -84,6 +84,11 @@
     .tags { display: flex; flex-wrap: wrap; gap: 6px; margin-top: auto; padding-top: 8px; }
     .tag { font-size: 12px; padding: 2px 8px; border-radius: 4px; background: var(--chip); color: var(--muted); }
     .tag.notes { background: var(--accent-soft); color: var(--accent); }
+    .later { font-size: 14px; color: var(--text); border-left: 3px solid var(--accent); padding-left: 10px; }
+    .later b { color: var(--accent); font-weight: 600; }
+    .actions { display: flex; flex-wrap: wrap; gap: 6px 16px; font-size: 14px; font-weight: 600; padding-top: 4px; }
+    .actions a { text-decoration: none; }
+    .actions a:hover { text-decoration: underline; }
 
     .featured .card { flex-direction: row; }
     .featured .card a.thumb { flex: 0 0 52%; aspect-ratio: auto; min-height: 260px; }
@@ -134,7 +139,9 @@
           <div class="meta">June 2017 · Esri R&amp;D DC</div>
           <h3><a href="sonar/">Chatbots as an Interface for Spatial Data and Analysis</a></h3>
           <p>Why maps are only one way to show geography, and how Sonar lets residents ask Slack, Facebook Messenger, or Alexa "what's going on around me?" Covers the serverless architecture and lessons from designing voice interfaces.</p>
+          <p class="later"><b>Since then:</b> Sonar's code is open on GitHub.</p>
           <div class="tags"><span class="tag">Chatbots</span><span class="tag">Voice UI</span><span class="tag">Civic tech</span><span class="tag notes">Speaker notes</span></div>
+          <div class="actions"><a href="sonar/">Slides</a><a href="pdf/sonar.pdf">PDF</a><a href="https://youtu.be/H_cdn2kVB-E?t=4m35s">Video: DevSummit 2017 demo</a><a href="https://youtu.be/1J5y8sJ9aKI">Video: architecture demo</a><a href="https://github.com/esri/sonar">Code</a></div>
         </div>
       </article>
     </section>
@@ -147,25 +154,20 @@
           <div class="meta">October 2016 · Esri GeoDev</div>
           <h3><a href="geodev-2016-cedar/">Charts &amp; Custom Visualizations Beyond the Map</a></h3>
           <p>Introducing Cedar, a library for building charts directly from geographic feature services.</p>
-          <div class="tags"><span class="tag">Cedar</span><span class="tag">Data viz</span><span class="tag">Keynote export</span></div>
+          <p class="later"><b>Since then:</b> Cedar went on to a 1.0 release and is still on GitHub.</p>
+          <div class="tags"><span class="tag">Cedar</span><span class="tag">Data viz</span></div>
+          <div class="actions"><a href="geodev-2016-cedar/">Slides</a><a href="pdf/geodev-2016-cedar.pdf">PDF</a><a href="https://github.com/Esri/cedar">Code</a></div>
         </div>
       </article>
       <article class="card" data-topics="opendata webmaps opensource">
         <a class="thumb" href="ds-2016-od-customization/"><img src="thumbs/ds-2016-od-customization.jpg" alt="Title slide: Deep Customization of ArcGIS Open Data" loading="lazy"></a>
         <div class="body">
           <div class="meta">March 2016 · Esri Developer Summit · with Dave Bouwman</div>
-          <h3><a href="ds-2016-od-customization/">Deep Customization of ArcGIS Open Data</a></h3>
-          <p>Theming and extending open data sites, the JSON API, open-source starter apps in Ember, React, and Angular, and the road to Hub.</p>
-          <div class="tags"><span class="tag">ArcGIS Open Data</span><span class="tag">APIs</span><span class="tag">Ember</span></div>
-        </div>
-      </article>
-      <article class="card" data-topics="opendata webmaps opensource">
-        <a class="thumb" href="esri-devsummit-2016/"><img src="thumbs/esri-devsummit-2016.jpg" alt="Title slide: ArcGIS Open Data for Developers" loading="lazy"></a>
-        <div class="body">
-          <div class="meta">March 2016 · Esri Developer Summit</div>
-          <h3><a href="esri-devsummit-2016/">ArcGIS Open Data for Developers</a></h3>
-          <p>Architecture of ArcGIS Open Data, the API explorer, Koop and Winnow, federated search with Data.gov, and early Hub sites.</p>
-          <div class="tags"><span class="tag">ArcGIS Open Data</span><span class="tag">Koop</span><span class="tag">Hub</span></div>
+          <h3><a href="ds-2016-od-customization/">ArcGIS Open Data for Developers</a></h3>
+          <p>Architecture of ArcGIS Open Data, theming and extending sites, the JSON API, Koop and Winnow, open-source starter apps, and the road to Hub. Given in a solo version and an extended version with Dave Bouwman.</p>
+          <p class="later"><b>Since then:</b> ArcGIS Open Data became ArcGIS Hub the following year.</p>
+          <div class="tags"><span class="tag">ArcGIS Open Data</span><span class="tag">APIs</span><span class="tag">Koop</span></div>
+          <div class="actions"><a href="ds-2016-od-customization/">Extended slides</a><a href="pdf/ds-2016-od-customization.pdf">PDF</a><a href="esri-devsummit-2016/">Solo version</a><a href="pdf/esri-devsummit-2016.pdf">Solo PDF</a></div>
         </div>
       </article>
     </div>
@@ -179,6 +181,7 @@
           <h3><a href="jsgeo2015/">Esri R&amp;D JavaScript: Some Projects</a></h3>
           <p>A tour of the open GeoServices API, making FeatureServer queries readable, Terraformer, and the R&amp;D lab's open-source projects.</p>
           <div class="tags"><span class="tag">GeoServices</span><span class="tag">Terraformer</span></div>
+          <div class="actions"><a href="jsgeo2015/">Slides</a><a href="pdf/jsgeo2015.pdf">PDF</a></div>
         </div>
       </article>
     </div>
@@ -191,7 +194,9 @@
           <div class="meta">September 2014 · js.geo</div>
           <h3><a href="jsgeo2014/">Koop: ETL for APIs</a></h3>
           <p>Turning GitHub, Gists, Socrata, and OpenStreetMap into GeoJSON and feature services, with live URL queries like "every public toilet in Portland."</p>
+          <p class="later"><b>Since then:</b> Koop lives on as the open-source koopjs project.</p>
           <div class="tags"><span class="tag">Koop</span><span class="tag">GeoJSON</span><span class="tag">OpenStreetMap</span></div>
+          <div class="actions"><a href="jsgeo2014/">Slides</a><a href="pdf/jsgeo2014.pdf">PDF</a><a href="https://github.com/koopjs/koop">Code</a></div>
         </div>
       </article>
       <article class="card" data-topics="opensource opendata">
@@ -201,6 +206,7 @@
           <h3><a href="aag2014/">OpenGIS: The Nuts &amp; Bolts of Open</a></h3>
           <p>Why "open" means code, specs, formats, and licenses. Pragmatism over standards, small pieces loosely joined, and hybrid architectures.</p>
           <div class="tags"><span class="tag">Standards</span><span class="tag">GeoJSON</span><span class="tag">Workshop</span></div>
+          <div class="actions"><a href="aag2014/">Slides</a><a href="pdf/aag2014.pdf">PDF</a></div>
         </div>
       </article>
       <article class="card" data-topics="opendata">
@@ -209,7 +215,9 @@
           <div class="meta">March 2014 · Esri DC</div>
           <h3><a href="opendata/">Open Data: Don't Move Your Data</a></h3>
           <p>Four principles for open data: discoverable, explorable, accessible, collaborative. Introduces ArcGIS Open Data.</p>
+          <p class="later"><b>Since then:</b> This grew into ArcGIS Open Data, and later ArcGIS Hub.</p>
           <div class="tags"><span class="tag">ArcGIS Open Data</span></div>
+          <div class="actions"><a href="opendata/">Slides</a><a href="pdf/opendata.pdf">PDF</a></div>
         </div>
       </article>
     </div>
@@ -223,6 +231,7 @@
           <h3><a href="hesn/">Open Data for Innovation</a></h3>
           <p>What makes data open, the $3 trillion McKinsey estimate, and development examples from USAID, OpenStreetMap in Kibera, and World Bank Mapping for Results.</p>
           <div class="tags"><span class="tag">International development</span><span class="tag">Policy</span></div>
+          <div class="actions"><a href="hesn/">Slides</a><a href="pdf/hesn.pdf">PDF</a></div>
         </div>
       </article>
       <article class="card" data-topics="opensource">
@@ -232,6 +241,7 @@
           <h3><a href="social-coding/">Social Coding with Git &amp; GitHub</a></h3>
           <p>A leveled tutorial from first commit to pull requests and rebasing, plus Gists, bl.ocks, wikis, and gh-pages.</p>
           <div class="tags"><span class="tag">Git</span><span class="tag">Tutorial</span></div>
+          <div class="actions"><a href="social-coding/">Slides</a><a href="pdf/social-coding.pdf">PDF</a></div>
         </div>
       </article>
       <article class="card" data-topics="civic opendata webmaps">
@@ -241,6 +251,7 @@
           <h3><a href="esri-geospatialopportunities/">Opportunities in Geospatial</a></h3>
           <p>Five shifts reshaping GIS: digital-native maps, mobile context, social collaboration, big data, and realtime feeds, illustrated with the NYC Marathon.</p>
           <div class="tags"><span class="tag">Trends</span><span class="tag">Big data</span><span class="tag notes">Speaker notes</span></div>
+          <div class="actions"><a href="esri-geospatialopportunities/">Slides</a><a href="pdf/esri-geospatialopportunities.pdf">PDF</a></div>
         </div>
       </article>
       <article class="card" data-topics="opensource">
@@ -249,7 +260,9 @@
           <div class="meta">January 2013</div>
           <h3><a href="esri-opensource/">Going Open-Source with Esri</a></h3>
           <p>Why a commercial GIS company started building in the open: the cathedral and the bazaar, Apache 2 by default, and positive feedback loops with developers.</p>
+          <p class="later"><b>Since then:</b> Esri's GitHub went from about 50 repositories here to 376 a year later.</p>
           <div class="tags"><span class="tag">Open source</span><span class="tag">Strategy</span><span class="tag notes">Speaker notes</span></div>
+          <div class="actions"><a href="esri-opensource/">Slides</a><a href="pdf/esri-opensource.pdf">PDF</a></div>
         </div>
       </article>
       <article class="card" data-topics="webmaps opensource">
@@ -259,6 +272,7 @@
           <h3><a href="jsgeo2013/">Mapstraction</a></h3>
           <p>One JavaScript API across Google, Esri, Leaflet, OpenLayers and a dozen other map providers, and why abstraction means freedom.</p>
           <div class="tags"><span class="tag">Mapstraction</span><span class="tag">Lightning talk</span></div>
+          <div class="actions"><a href="jsgeo2013/">Slides</a><a href="pdf/jsgeo2013.pdf">PDF</a><a href="https://github.com/mapstraction/mxn">Code</a></div>
         </div>
       </article>
     </div>
@@ -267,7 +281,7 @@
   </main>
 
   <footer class="wrap">
-    <p>Most decks run in the browser. Use <kbd>→</kbd> or <kbd>Space</kbd> to advance. On decks marked "Speaker notes," press <kbd>S</kbd> to open the notes.</p>
+    <p>Every talk has a PDF download for quick skimming. In the browser, use <kbd>→</kbd> or <kbd>Space</kbd> to advance. On decks marked "Speaker notes," press <kbd>S</kbd> to open the notes.</p>
     <p>Slides © Andrew Turner. Built with reveal.js, big.js, and Keynote.</p>
   </footer>
 

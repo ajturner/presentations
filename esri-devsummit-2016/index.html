@@ -14,11 +14,11 @@
 
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
 
-    <link rel="stylesheet" href="reveal.js/css/reveal.css">
-    <link rel="stylesheet" href="reveal.js/css/theme/esri-dev-summit-2016.css" id="theme">
+    <link rel="stylesheet" href="../shared/reveal-devsummit-2016/css/reveal.css">
+    <link rel="stylesheet" href="../shared/reveal-devsummit-2016/css/theme/esri-dev-summit-2016.css" id="theme">
 
     <!-- Code syntax highlighting -->
-    <link rel="stylesheet" href="./reveal.js/lib/css/solarized_dark.css">
+    <link rel="stylesheet" href="../shared/reveal-devsummit-2016/lib/css/solarized_dark.css">
 
     <!-- Printing and PDF exports -->
     <script>
@@ -30,11 +30,11 @@
       document.getElementsByTagName( 'head' )[0].appendChild( link );
       }
           if (window.location.search.match( /print-pdf/gi )) {
-            createLink('./reveal.js/css/print/pdf.css');
+            createLink('../shared/reveal-devsummit-2016/css/print/pdf.css');
             createLink('./template/pdf.css');
           }
           else {
-            createLink('./reveal.js/css/print/paper.css');
+            createLink('../shared/reveal-devsummit-2016/css/print/paper.css');
           }
     </script>
 
@@ -49,13 +49,13 @@
 
       <!-- Any section element inside of this container is displayed as a slide -->
       <div class="slides">
-        <section data-markdown="opendata.md" data-background="./reveal.js/img/bg-4.png" ></section>
+        <section data-markdown="opendata.md" data-background="../shared/reveal-devsummit-2016/img/bg-4.png" ></section>
       </div>
 
     </div>
 
-    <script src="./reveal.js/lib/js/head.min.js"></script>
-    <script src="./reveal.js/js/reveal.js"></script>
+    <script src="../shared/reveal-devsummit-2016/lib/js/head.min.js"></script>
+    <script src="../shared/reveal-devsummit-2016/js/reveal.js"></script>
 
     <script>
 
@@ -84,12 +84,12 @@
 
         // Optional reveal.js plugins
         dependencies: [
-          { src: 'reveal.js/lib/js/classList.js', condition: function() { return !document.body.classList; } },
-          { src: 'reveal.js/plugin/markdown/marked.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
-          { src: 'reveal.js/plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
-          { src: 'reveal.js/plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } },
-          { src: 'reveal.js/plugin/zoom-js/zoom.js', async: true },
-          { src: 'reveal.js/plugin/notes/notes.js', async: true }
+          { src: '../shared/reveal-devsummit-2016/lib/js/classList.js', condition: function() { return !document.body.classList; } },
+          { src: '../shared/reveal-devsummit-2016/plugin/markdown/marked.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+          { src: '../shared/reveal-devsummit-2016/plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+          { src: '../shared/reveal-devsummit-2016/plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } },
+          { src: '../shared/reveal-devsummit-2016/plugin/zoom-js/zoom.js', async: true },
+          { src: '../shared/reveal-devsummit-2016/plugin/notes/notes.js', async: true }
         ]
       });
 
